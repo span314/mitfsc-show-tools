@@ -73,11 +73,11 @@ Olivia Yao 0:02:30
 Olivia Yao is currently a freshman at MIT and has been skating for 14 years. She is a former regional and national competitor and very excited to continue competing for MIT.
 
 Opening Number 0:02:44
-['Alyssa Chen', 'Andy Huang', 'Aviva Benson', 'Brooke Tam', 'Diane Brancazio', 'Ellen Shea', 'Esther Horwich', 'Heather Charron', 'Hong Xiang', 'Jierui Fang', 'Jose Lebron', 'Maureen Fountain-Quinn', 'Meg Khasgerel', 'Mia LaRocca', 'Patricia Ruata', 'Priyanka Chatterjee', 'Shawn Pan', 'Stella Yang']
+['Alyssa Chen', 'Andy Huang', 'Aviva Benson', 'Brooke Tam', 'Diane Brancazio', 'Ellen Shea', 'Esther Horwich', 'Heather Charron', 'Hong Xiang', 'Jierui Fang', 'Jose Lebron', 'Maureen Fountain-Quinn', 'Meg Khasgerel', 'Mia LaRocca', 'Olivia Yao', 'Patricia Ruata', 'Priyanka Chatterjee', 'Shawn Pan', 'Stella Yang']
 
 
 Rhythm Blues 0:01:34
-['Alex Landsman', 'Amy Mossman', 'Aviva Benson', 'Dave Brancazio', 'Diane Brancazio', 'Maureen Fountain-Quinn', 'Olivia Yao', 'Priyanka Chatterjee', 'Shawn Pan', 'Susan Scott']
+['Alex Landsman', 'Amy Mossman', 'Aviva Benson', 'Dave Brancazio', 'Diane Brancazio', 'Esther Horwich', 'Maureen Fountain-Quinn', 'Olivia Yao', 'Priyanka Chatterjee', 'Shawn Pan', 'Susan Scott']
 The Rhythm Blues is another of the preliminary dances. 
 
 Sarah Don 0:02:40
