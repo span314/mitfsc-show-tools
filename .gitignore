@@ -1,3 +1,5 @@
 *.aux
 *.log
-program.tex
+*.mp3
+**/input.csv
+**/program.tex

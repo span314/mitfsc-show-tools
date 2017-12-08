@@ -1,0 +1,100 @@
+AnanyaNandyDianeZhou
+Anti Hero 138
+['Ananya Nandy', 'Diane Zhou']
+Diane is a junior studying computer science and president of the Figure Skating Club. Ananya is a junior studying mechanical engineering and team captain of the club. They are excited to perform their third duet together, set to the song Anti Hero.
+
+DianeBrancazio
+Diane Brancazio 116
+['Diane Brancazio']
+TBD
+
+DragonNight
+Dragon Night 120
+['Aviva Benson', 'Bonny Kellermann', 'Diane Brancazio', 'Diane Zhou', 'Ellen Shea', 'Flora Su', 'Jean Sack', 'Jierui Fang', 'Jose Lebron', 'Max Yu', 'Mia LaRocca', 'Mickey Barry', 'Patricia Diaz', 'Rachel Bowens-Rubin', 'Sabina Chen', 'Shawn Pan', 'Stef Ren', 'Xueqi Zhang']
+
+
+DutchWaltz
+Dutch Waltz 120
+['Ellen Shea', 'Flora Su', 'Mickey Barry', 'Shawn Pan', 'Xueqi Zhang']
+
+
+FloraSu
+Flora Su 169
+['Flora Su']
+Senior Short Program (I don't have any information about this piece of music; it's an unpublished piece of music that a friend of my coach gave to her. So tell them about me instead :P) Flora is a second-year graduate student in Course 1, Environmental Engineering, studying atmospheric chemistry and climate modeling. She will be finishing a Master's in Engineering this fall. (Dunno if this is worth sharing - I was the Junior Ladies silver medalist at the 2013 U.S. Collegiate National Championships)
+
+Intermission
+Intermission 360
+[]
+6 Minute Warmup
+
+JodiBeggs
+Jodi Beggs 189
+['Jodi Beggs']
+I picked the music like a week ago so feel free to let me know if you like the general concept.  :)
+
+KevinShum
+Kevin Shum 154
+['Kevin Shum']
+Kevin is a junior studying Computer Science and is the President of Beta Theta Pi. He is a two-time US Junior Silver Medalist, and has also represented Team USA for the past three seasons, competing on the International Junior Grand Prix circuit and the World Junior Championships. Over the summer, he won the 2017 US Collegiate National Championships, brining the title back home to MIT. Today, he will be skating to an exhibition number to Nat King Cole's L-O-V-E.
+
+Kilian
+Kilian 120
+['Flora Su', 'Kylie Ying']
+
+
+KylieYing
+Kylie Ying 164
+['Kylie Ying']
+Kylie has been competitively skating since she was eleven and is a USFS double gold medalist in moves-in-the-field and freestyle, and a USFS silver medalist in ice dance. She has competed at the national level in synchronized skating and also plays for the MIT men's club hockey team.
+
+ShannenWuKylieYing
+Kylie and Shannen 195
+['Kylie Ying', 'Shannen Wu']
+There seems to be some bad blood between old Taylor and new Taylor, but she'll never go out of style... So shake it off and look what New Taylor made us do... Are you ready for it?
+
+LizMartin
+Liz Martin 190
+['Liz Martin']
+Liz is a senior majoring in Computer Science and Biology. She's been figure skating for about 16 years now and has been a Vice President of MITFSC for the past 3 years. She hopes to continue participating in club activities after she graduates! Liz will be skating to music from 'La La Land.'
+
+SabinaChenDianeZhou
+Nirvana 158
+['Diane Zhou', 'Sabina Chen']
+In the grind of everyday life, expectations and uncertainty weigh us down. Sometimes they overwhelm us so much that we can't enjoy life for fear of disappointing ourselves and the people we care about. Skating to a song called "Nirvana" from the anime Noragami, Sabina and Diane seek moments of bliss in the face of doubt and anxiety by learning to appreciate the present despite worries for the future.
+
+SarahDon
+Sarah Don 163
+['Sarah Don']
+Sarah Don is an MIT alum and now works at the MIT Reactor Lab. She learned to skate with the club while she was a student just a few years ago and now skates every day before work. Sarah also makes her own costumes and enjoys the whole creative and athletic process of developing a program each season.
+
+SashaChurikova
+Sasha Churikova  124
+['Sasha Churikova']
+Sasha is a grad student in materials science, and unfortunatly doesn't have much time to skate. Today she is happy to perform a semi-improvised program to the soundtrack of one of her favorite movies, Amelie. 
+
+ShannenWu
+Shannen Wu 174
+['Shannen Wu']
+Shannen has been figure skating for twelve years and competed at the US National Collegiate Figure Skating Championships and the USFS Southwest Pacific Regional Championships. She choreographed this program to "Demons" by Imagine Dragons. 
+
+ShawnPan
+Shawn Pan 98
+['Shawn Pan']
+Shawn is a 2012 MIT alum who learned to skate as a student here.
+
+StefRen
+Stef Ren 86
+['Stef Ren']
+Stef is a junior studying Computer Science. She lives in East Campus. In her free time, she enjoys cooking and listening to music.
+
+SwingDance
+Swing Dance 120
+['Aviva Benson', 'Diane Brancazio', 'Flora Su', 'Jean Sack', 'Mia LaRocca', 'Mickey Barry', 'Shawn Pan']
+
+
+TetsuyaKaji
+Tetsuya Kaji 128
+['Tetsuya Kaji']
+Tetsuya is a graduate student at MIT. He skates to the theme song of Westworld.
+
