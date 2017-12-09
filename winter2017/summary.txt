@@ -64,14 +64,14 @@ Sarah Don 163
 Sarah Don is an MIT alum and now works at the MIT Reactor Lab. She learned to skate with the club while she was a student just a few years ago and now skates every day before work. Sarah also makes her own costumes and enjoys the whole creative and athletic process of developing a program each season.
 
 SashaChurikova
-Sasha Churikova  124
+Sasha Churikova 124
 ['Sasha Churikova']
-Sasha is a grad student in materials science, and unfortunatly doesn't have much time to skate. Today she is happy to perform a semi-improvised program to the soundtrack of one of her favorite movies, Amelie. 
+Sasha is a grad student in materials science, and unfortunatly doesn't have much time to skate. Today she is happy to perform a semi-improvised program to the soundtrack of one of her favorite movies, Amelie.
 
 ShannenWu
 Shannen Wu 174
 ['Shannen Wu']
-Shannen has been figure skating for twelve years and competed at the US National Collegiate Figure Skating Championships and the USFS Southwest Pacific Regional Championships. She choreographed this program to "Demons" by Imagine Dragons. 
+Shannen has been figure skating for twelve years and competed at the US National Collegiate Figure Skating Championships and the USFS Southwest Pacific Regional Championships. She choreographed this program to "Demons" by Imagine Dragons.
 
 ShawnPan
 Shawn Pan 98

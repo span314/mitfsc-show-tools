@@ -64,11 +64,11 @@ def get_column(row, column_name, backup_column_name=""):
   if row.get(override_column):
     overrides = json.loads(row[override_column])
     if overrides.get(column_name):
-      return overrides[column_name]
+      return overrides[column_name].strip()
   if row.get(column_name):
-    return row[column_name]
+    return row[column_name].strip()
   elif row.get(backup_column_name):
-    return row[backup_column_name]
+    return row[backup_column_name].strip()
   else:
     return ""
 
@@ -171,7 +171,6 @@ sorted_numbers = sorted(numbers.values())
 summary_out = os.path.join(directory, "summary.txt")
 with open(summary_out, "w") as f:
   for number in sorted_numbers:
-    print number.key
     f.write(str(number))
     f.write("\n\n")
 
