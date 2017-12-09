@@ -163,7 +163,7 @@ with open(input_spreadsheet_path, "r") as file_in:
     seconds = group_times.get(group_key)
     numbers[group_key] = Number(group_key, seconds, "", group_name, participants)
   #TODO Fix hack
-  numbers["Intermission"] = Number("Intermission", 360, "6 Minute Warmup", "~Intermission~", "")
+  numbers["Intermission"] = Number("Intermission", 360, "6 Minute Warmup", "***Intermission***", "")
 
 sorted_numbers = sorted(numbers.values())
 

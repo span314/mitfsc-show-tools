@@ -1,3 +1,8 @@
+Intermission
+***Intermission*** 360
+[]
+6 Minute Warmup
+
 AnanyaNandyDianeZhou
 Anti Hero 138
 ['Ananya Nandy', 'Diane Zhou']
@@ -92,9 +97,4 @@ TetsuyaKaji
 Tetsuya Kaji 128
 ['Tetsuya Kaji']
 Tetsuya is a graduate student at MIT. He skates to the theme song of Westworld.
-
-Intermission
-~Intermission~ 360
-[]
-6 Minute Warmup
 
