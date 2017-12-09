@@ -39,7 +39,7 @@ Kevin Shum 154
 Kevin is a junior studying Computer Science and is the President of Beta Theta Pi. He is a two-time US Junior Silver Medalist, and has also represented Team USA for the past three seasons, competing on the International Junior Grand Prix circuit and the World Junior Championships. Over the summer, he won the 2017 US Collegiate National Championships, brining the title back home to MIT. Today, he will be skating to an exhibition number to Nat King Cole's L-O-V-E.
 
 Kilian
-Kilian 120
+Kilian 92
 ['Flora Su', 'Kylie Ying']
 
 
@@ -56,7 +56,7 @@ There seems to be some bad blood between old Taylor and new Taylor, but she'll n
 LizMartin
 Liz Martin 190
 ['Liz Martin']
-Liz is a senior majoring in Computer Science and Biology. She's been figure skating for about 16 years now and has been a Vice President of MITFSC for the past 3 years. She hopes to continue participating in club activities after she graduates! Liz will be skating to music from 'La La Land.'
+Liz is a senior majoring in Computer Science and Biology. She's been figure skating for about 16 years now and has been a Vice President of MITFSC for the past 3 years. She is also a Captain of the Women's Lightweight Crew Team. She hopes to continue participating in club activities after she graduates! Liz will be skating to music from 'La La Land.'
 
 SabinaChenDianeZhou
 Nirvana 158
@@ -86,7 +86,7 @@ Shawn is a 2012 MIT alum who learned to skate as a student here.
 StefRen
 Stef Ren 86
 ['Stef Ren']
-Stef is a junior studying Computer Science. She lives in East Campus. In her free time, she enjoys cooking and listening to music.
+Stef is a junior living in East Campus and studying Computer Science. In her free time, she enjoys cooking and listening to music. This program is to Memory from Cats, one of her favorite musicals.
 
 SwingDance
 Swing Dance 120

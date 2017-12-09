@@ -33,7 +33,7 @@ group_times = {
   "DragonNight": 120,
   "DutchWaltz": 120,
   "SwingDance": 120,
-  "Kilian": 120
+  "Kilian": 92
 }
 program_columns = [
   ["Program Blurb #1", "Music Upload #1", "participants1", "program1"],
