@@ -11,7 +11,7 @@ Diane is a junior studying computer science and president of the Figure Skating 
 DianeBrancazio
 Diane Brancazio 116
 ['Diane Brancazio']
-TBD
+Diane is a long time member of the figure skating club, and now works at the Edgerton Center helping people setup and run Makerspaces.  Skating is her great joy, and she is thrilled to share it with others.
 
 DragonNight
 Dragon Night 120
@@ -19,7 +19,7 @@ Dragon Night 120
 
 
 DutchWaltz
-Dutch Waltz 120
+Dutch Waltz 95
 ['Ellen Shea', 'Flora Su', 'Mickey Barry', 'Shawn Pan', 'Xueqi Zhang']
 
 
@@ -89,7 +89,7 @@ Stef Ren 86
 Stef is a junior living in East Campus and studying Computer Science. In her free time, she enjoys cooking and listening to music. This program is to Memory from Cats, one of her favorite musicals.
 
 SwingDance
-Swing Dance 120
+Swing Dance 100
 ['Aviva Benson', 'Diane Brancazio', 'Flora Su', 'Jean Sack', 'Mia LaRocca', 'Mickey Barry', 'Shawn Pan']
 
 

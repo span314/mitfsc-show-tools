@@ -31,8 +31,8 @@ group_columns = {
 }
 group_times = {
   "DragonNight": 120,
-  "DutchWaltz": 120,
-  "SwingDance": 120,
+  "DutchWaltz": 95,
+  "SwingDance": 100,
   "Kilian": 92
 }
 program_columns = [
