@@ -23,11 +23,6 @@ Flora Su 169
 ['Flora Su']
 Senior Short Program (I don't have any information about this piece of music; it's an unpublished piece of music that a friend of my coach gave to her. So tell them about me instead :P) Flora is a second-year graduate student in Course 1, Environmental Engineering, studying atmospheric chemistry and climate modeling. She will be finishing a Master's in Engineering this fall. (Dunno if this is worth sharing - I was the Junior Ladies silver medalist at the 2013 U.S. Collegiate National Championships)
 
-Intermission
-Intermission 360
-[]
-6 Minute Warmup
-
 JodiBeggs
 Jodi Beggs 189
 ['Jodi Beggs']
@@ -61,7 +56,7 @@ Liz is a senior majoring in Computer Science and Biology. She's been figure skat
 SabinaChenDianeZhou
 Nirvana 158
 ['Diane Zhou', 'Sabina Chen']
-In the grind of everyday life, expectations and uncertainty weigh us down. Sometimes they overwhelm us so much that we can't enjoy life for fear of disappointing ourselves and the people we care about. Skating to a song called "Nirvana" from the anime Noragami, Sabina and Diane seek moments of bliss in the face of doubt and anxiety by learning to appreciate the present despite worries for the future.
+In the grind of everyday life, expectations and uncertainty weigh us down. Sometimes they overwhelm us so much that we cant enjoy life for fear of disappointing ourselves and the people we care about. Skating to a song called "Nirvana" from the anime Noragami, Sabina and Diane seek moments of bliss in the face of doubt and anxiety by learning to appreciate the present despite worries for the future.
 
 SarahDon
 Sarah Don 163
@@ -97,4 +92,9 @@ TetsuyaKaji
 Tetsuya Kaji 128
 ['Tetsuya Kaji']
 Tetsuya is a graduate student at MIT. He skates to the theme song of Westworld.
+
+Intermission
+~Intermission~ 360
+[]
+6 Minute Warmup
 

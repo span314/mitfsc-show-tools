@@ -19,7 +19,8 @@ start_time = datetime.datetime(2017, 12, 9, 2, 5)
 directory = os.path.abspath("winter2017")
 
 #Spreadsheet In
-input_spreadsheet_url = "" #google docs spreadsheet csv export link goes here
+spreadsheet_key = "" #spreadsheet key goes here
+input_spreadsheet_url = "https://docs.google.com/spreadsheets/d/" + spreadsheet_key + "/export?format=csv"
 name_column = "Name"
 #TODO refactor group numbers
 group_columns = {
@@ -45,7 +46,7 @@ class Number():
   def __init__(self, key, length_seconds, blurb, name, participants):
     self.key = key
     self.length_seconds = length_seconds
-    self.blurb = blurb
+    self.blurb = "".join([c for c in blurb if ord(c) < 128]) #todo fix weird unicode bug
     self.name = name
     participant_list = participants.split(",") if participants else []
     participant_list = [str(p).strip() for p in participant_list]
@@ -56,11 +57,6 @@ class Number():
     return cmp(self.name, other.name)
 
   def __str__(self):
-    print self.key
-    print self.name
-    print self.length_seconds
-    print self.participants
-    print self.blurb
     return self.key + "\n" + self.name + " " + str(self.length_seconds) + "\n" + str(self.participants) + "\n" + self.blurb
 
 #Helpers
@@ -167,7 +163,7 @@ with open(input_spreadsheet_path, "r") as file_in:
     seconds = group_times.get(group_key)
     numbers[group_key] = Number(group_key, seconds, "", group_name, participants)
   #TODO Fix hack
-  numbers["Intermission"] = Number("Intermission", 360, "6 Minute Warmup", "Intermission", "")
+  numbers["Intermission"] = Number("Intermission", 360, "6 Minute Warmup", "~Intermission~", "")
 
 sorted_numbers = sorted(numbers.values())
 
@@ -175,6 +171,7 @@ sorted_numbers = sorted(numbers.values())
 summary_out = os.path.join(directory, "summary.txt")
 with open(summary_out, "w") as f:
   for number in sorted_numbers:
+    print number.key
     f.write(str(number))
     f.write("\n\n")
 
