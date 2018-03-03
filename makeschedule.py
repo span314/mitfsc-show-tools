@@ -176,6 +176,8 @@ def parse_group_numbers(schedule):
             if group_number_match:
                 start = schedule.starts[build_key(column)]
                 start.name = group_number_match.group(1)
+                if start.name == "Matrix":  # TODO fix survey setup next year
+                    start.name = "The Matrix"
                 group_numbers[column] = start
         for row in reader:
             first_name = row["First Name"].strip()

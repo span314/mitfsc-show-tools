@@ -1,5 +1,5 @@
 GroupNumbersOpeningNumber  Opening Number  104
-Diane Brancazio, Kenny Derek, Andy Huang, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Shawn Pan, Jean Sack, Ellen Shea, Flora Su, Elaine Zhang
+Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 
 OliviaYao  Olivia Yao  134
 Olivia Yao
@@ -10,11 +10,11 @@ Jessica Kesner
 SabinaChenDianeZhou  Psycho-Pass  114
 Sabina Chen, Diane Zhou
 
-MichelleLiu  sorry, I was thinking about Hellshake Yano  128
-Michelle Liu
+JaneCodman  Jane Codman  100
+Jane Codman
 
 GroupNumbersAmericanWaltz  American Waltz  119
-Mickey Barry, Diane Brancazio, Andy Huang, Mia LaRocca, Shawn Pan, Flora Su, Linda Warner
+Mickey Barry, Diane Brancazio, Andy Huang, Jessica Kesner, Mia LaRocca, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
 
 JonathanLyles  Challenging the Frozen Bull  98
 Jonathan Lyles
@@ -43,14 +43,14 @@ Brooke Tam
 KylieYing  Kylie Ying  187
 Kylie Ying
 
-GroupNumbersMatrix  Matrix  122
-Sabina Chen, Tetsuya Kaji, Flora Su, Diane Zhou
+GroupNumbersMatrix  The Matrix  122
+Sabina Chen, Tetsuya Kaji, Ananya Nandy, Flora Su, Diane Zhou
 
 Intermission  Intermission  1080
 
 
 GroupNumbersHickoryHoedown  Hickory Hoedown  120
-Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Linda Warner
+Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
 
 DianeZhou  Moments  166
 Diane Zhou
@@ -65,7 +65,7 @@ SabinaChen  King  150
 Sabina Chen
 
 GroupNumbersStarlightWaltz  Starlight Waltz  109
-Shawn Pan, Diane Zhou
+Shawn Pan, Cydney Wong, Diane Zhou
 
 TetsuyaKaji  Tetsuya Kaji  150
 Tetsuya Kaji
@@ -77,17 +77,17 @@ ShannenWu  Gravity  165
 Shannen Wu
 
 GroupNumbersBollywood  Bollywood  189
-Mickey Barry, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner
+Mickey Barry, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
 
-FloraSu  Flora Su  99
+FloraSu  Flora Su  169
 Flora Su
 
-JaneCodman  Jane Codman  100
-Jane Codman
+MichelleLiu  sorry, I was thinking about Hellshake Yano  128
+Michelle Liu
 
-ElinSchranAislinnMunckKristinGallas  Elin Schran, Aislinn Munck, Kristin Gallas  98
+ElinSchranAislinnMunckKristinGallas  Promise  157
 Kristin Gallas, Aislinn Munck, Elin Schran
 
 GroupNumbersAdvancedNumber  Advanced Number  180
-Sabina Chen, Flora Su, Diane Zhou
+Sabina Chen, Flora Su, Shannen Wu, Diane Zhou
 

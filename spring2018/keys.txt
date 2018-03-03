@@ -2,7 +2,7 @@ GroupNumbersOpeningNumber
 OliviaYao
 JessicaKesner
 SabinaChenDianeZhou
-MichelleLiu
+JaneCodman
 GroupNumbersAmericanWaltz
 JonathanLyles
 AmyMossman
@@ -26,6 +26,6 @@ AislinnMunck
 ShannenWu
 GroupNumbersBollywood
 FloraSu
-JaneCodman
+MichelleLiu
 ElinSchranAislinnMunckKristinGallas
 GroupNumbersAdvancedNumber
