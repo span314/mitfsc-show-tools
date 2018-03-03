@@ -1,5 +1,5 @@
 GroupNumbersOpeningNumber  Opening Number  104
-Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
+Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 
 OliviaYao  Olivia Yao  134
 Olivia Yao
@@ -7,14 +7,17 @@ Olivia Yao
 JessicaKesner  Jessica Kesner  144
 Jessica Kesner
 
-SabinaChenDianeZhou  Psycho-Pass  114
-Sabina Chen, Diane Zhou
+SabinaChen  King  150
+Sabina Chen
 
-JaneCodman  Jane Codman  100
+JaneCodman  Jane Codman  99
 Jane Codman
 
+StefRen  Stef Ren  99
+Stef Ren
+
 GroupNumbersAmericanWaltz  American Waltz  119
-Mickey Barry, Diane Brancazio, Andy Huang, Jessica Kesner, Mia LaRocca, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
+Mickey Barry, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
 
 JonathanLyles  Challenging the Frozen Bull  98
 Jonathan Lyles
@@ -25,8 +28,8 @@ Amy Mossman
 JodiBeggs  Jodi Beggs  189
 Jodi Beggs
 
-StefRen  Stef Ren  99
-Stef Ren
+SabinaChenDianeZhou  Psycho-Pass  114
+Sabina Chen, Diane Zhou
 
 ShawnPan  Shawn Pan  98
 Shawn Pan
@@ -40,20 +43,14 @@ Andy Huang
 BrookeTam  Brooke Tam  96
 Brooke Tam
 
-KylieYing  Kylie Ying  187
-Kylie Ying
-
 GroupNumbersMatrix  The Matrix  122
 Sabina Chen, Tetsuya Kaji, Ananya Nandy, Flora Su, Diane Zhou
 
 Intermission  Intermission  1080
 
 
-GroupNumbersHickoryHoedown  Hickory Hoedown  120
-Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
-
-DianeZhou  Moments  166
-Diane Zhou
+GroupNumbersStarlightWaltz  Starlight Waltz  109
+Shawn Pan, Cydney Wong, Kylie Ying, Diane Zhou
 
 DianeBrancazio  Diane Brancazio  105
 Diane Brancazio
@@ -61,14 +58,14 @@ Diane Brancazio
 SarahDon  Sarah Don  134
 Sarah Don
 
-SabinaChen  King  150
-Sabina Chen
+GroupNumbersBollywood  Bollywood  189
+Mickey Barry, Maureen FountainQuinn, Nidhi Juthani, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
 
-GroupNumbersStarlightWaltz  Starlight Waltz  109
-Shawn Pan, Cydney Wong, Diane Zhou
+DianeZhou  Moments  166
+Diane Zhou
 
-TetsuyaKaji  Tetsuya Kaji  150
-Tetsuya Kaji
+KylieYing  Kylie Ying  187
+Kylie Ying
 
 AislinnMunck  Dear lord let me stay on my feet :)  132
 Aislinn Munck
@@ -76,11 +73,14 @@ Aislinn Munck
 ShannenWu  Gravity  165
 Shannen Wu
 
-GroupNumbersBollywood  Bollywood  189
-Mickey Barry, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
-
 FloraSu  Flora Su  169
 Flora Su
+
+TetsuyaKaji  Tetsuya Kaji  150
+Tetsuya Kaji
+
+GroupNumbersHickoryHoedown  Hickory Hoedown  120
+Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
 
 MichelleLiu  sorry, I was thinking about Hellshake Yano  128
 Michelle Liu
@@ -89,5 +89,5 @@ ElinSchranAislinnMunckKristinGallas  Promise  157
 Kristin Gallas, Aislinn Munck, Elin Schran
 
 GroupNumbersAdvancedNumber  Advanced Number  180
-Sabina Chen, Flora Su, Shannen Wu, Diane Zhou
+Sabina Chen, Flora Su, Shannen Wu, Olivia Yao, Kylie Ying, Diane Zhou
 
