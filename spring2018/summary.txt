@@ -52,6 +52,9 @@ Intermission  Intermission  1080
 GroupNumbersStarlightWaltz  Starlight Waltz  109
 Shawn Pan, Cydney Wong, Kylie Ying, Diane Zhou
 
+ShannenWu  Gravity  165
+Shannen Wu
+
 DianeBrancazio  Diane Brancazio  105
 Diane Brancazio
 
@@ -69,9 +72,6 @@ Kylie Ying
 
 AislinnMunck  Dear lord let me stay on my feet :)  132
 Aislinn Munck
-
-ShannenWu  Gravity  165
-Shannen Wu
 
 FloraSu  Flora Su  169
 Flora Su
