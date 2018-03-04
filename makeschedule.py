@@ -335,6 +335,20 @@ def output_program(schedule):
     subprocess.call(["pdflatex", "-halt-on-error", "-output-directory", schedule.directory, "program.tex"])
 
 
+def prepare_music_for_disk(schedule):
+    track = 0
+    for start in schedule.sorted_starts():
+        music_path = os.path.join(schedule.music_directory, start.music_filename + ".mp3")
+        if os.path.exists(music_path):
+            track += 1
+            new_filename = "{:02d}_{}.mp3".format(track, start.key)
+            new_music_path = os.path.join(schedule.music_directory + "_ordered", new_filename)
+            shutil.copy(music_path, new_music_path)
+            mp3_file = eyed3.load(new_music_path)
+            mp3_file.tag.track = track
+            mp3_file.tag.save(new_music_path)
+
+
 ################
 ### WORKFLOW ###
 ################
@@ -349,3 +363,5 @@ output_summary(spring2018show)
 output_schedule(spring2018show)
 output_blurbs(spring2018show)
 output_program(spring2018show)
+prepare_music_for_disk(spring2018show)
+
