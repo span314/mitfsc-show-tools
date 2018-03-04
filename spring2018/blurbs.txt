@@ -1,5 +1,5 @@
 Opening Number
-Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
+Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 Introduction Blurb for Announcer
 
 Olivia Yao
@@ -23,7 +23,7 @@ Stef Ren
 Introduction Blurb for Announcer
 
 American Waltz
-Mickey Barry, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
+Mickey Barry, David Brancazio, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
 Introduction Blurb for Announcer
 
 Challenging the Frozen Bull
@@ -47,7 +47,7 @@ Shawn Pan
 Introduction Blurb for Announcer
 
 Canasta Tango
-Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Ellen Shea
+Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Ellen Shea, Elaine Zhang
 Introduction Blurb for Announcer
 
 Andy Huang
@@ -82,7 +82,7 @@ Sarah Don
 Sarah Don
 Introduction Blurb for Announcer
 
-Bollywood
+Salaam-E-Ishq
 Mickey Barry, Maureen FountainQuinn, Nidhi Juthani, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
 Introduction Blurb for Announcer
 
@@ -107,7 +107,7 @@ Tetsuya Kaji
 Introduction Blurb for Announcer
 
 Hickory Hoedown
-Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
+Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
 Introduction Blurb for Announcer
 
 sorry, I was thinking about Hellshake Yano

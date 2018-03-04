@@ -1,5 +1,5 @@
 05:35:00 Opening Number
-         Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
+         Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 05:38:14 Olivia Yao
          Olivia Yao
 05:41:08 Jessica Kesner
@@ -11,7 +11,7 @@
 05:49:41 Stef Ren
          Stef Ren
 05:52:00 American Waltz
-         Mickey Barry, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
+         Mickey Barry, David Brancazio, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
 05:55:29 Challenging the Frozen Bull
          Jonathan Lyles
 05:57:47 Amy Mossman
@@ -23,40 +23,40 @@
 06:06:51 Shawn Pan
          Shawn Pan
 06:09:09 Canasta Tango
-         Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Ellen Shea
-06:11:55 Andy Huang
+         Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Ellen Shea, Elaine Zhang
+06:11:46 Andy Huang
          Andy Huang
-06:14:11 Brooke Tam
+06:14:02 Brooke Tam
          Brooke Tam
-06:16:27 The Matrix
+06:16:18 The Matrix
          Sabina Chen, Tetsuya Kaji, Ananya Nandy, Flora Su, Diane Zhou
-06:19:59 Intermission
+06:19:50 Intermission
          
-06:37:59 Starlight Waltz
+06:37:50 Starlight Waltz
          Shawn Pan, Cydney Wong, Kylie Ying, Diane Zhou
-06:40:28 Gravity
+06:40:19 Gravity
          Shannen Wu
-06:43:53 Diane Brancazio
+06:43:44 Diane Brancazio
          Diane Brancazio
-06:46:18 Sarah Don
+06:46:09 Sarah Don
          Sarah Don
-06:49:12 Bollywood
+06:49:03 Salaam-E-Ishq
          Mickey Barry, Maureen FountainQuinn, Nidhi Juthani, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
-06:53:51 Moments
+06:53:42 Moments
          Diane Zhou
-06:57:17 Kylie Ying
+06:57:08 Kylie Ying
          Kylie Ying
-07:01:04 Dear lord let me stay on my feet :)
+07:00:48 Dear lord let me stay on my feet :)
          Aislinn Munck
-07:03:56 Flora Su
+07:03:40 Flora Su
          Flora Su
-07:07:25 Tetsuya Kaji
+07:07:09 Tetsuya Kaji
          Tetsuya Kaji
-07:10:35 Hickory Hoedown
-         Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
-07:14:05 sorry, I was thinking about Hellshake Yano
+07:10:19 Hickory Hoedown
+         Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
+07:13:07 sorry, I was thinking about Hellshake Yano
          Michelle Liu
-07:16:53 Promise
+07:15:55 Promise
          Kristin Gallas, Aislinn Munck, Elin Schran
-07:20:10 Advanced Number
+07:19:12 Advanced Number
          Sabina Chen, Flora Su, Shannen Wu, Olivia Yao, Kylie Ying, Diane Zhou

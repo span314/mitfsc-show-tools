@@ -1,5 +1,5 @@
 GroupNumbersOpeningNumber  Opening Number  104
-Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Michelle Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Jean Sack, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
+Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 
 OliviaYao  Olivia Yao  134
 Olivia Yao
@@ -17,7 +17,7 @@ StefRen  Stef Ren  99
 Stef Ren
 
 GroupNumbersAmericanWaltz  American Waltz  119
-Mickey Barry, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
+Mickey Barry, David Brancazio, Diane Brancazio, Andy Huang, Nidhi Juthani, Jessica Kesner, Shawn Pan, Flora Su, Brooke Tam, Linda Warner
 
 JonathanLyles  Challenging the Frozen Bull  98
 Jonathan Lyles
@@ -34,8 +34,8 @@ Sabina Chen, Diane Zhou
 ShawnPan  Shawn Pan  98
 Shawn Pan
 
-GroupNumbersCanastaTango  Canasta Tango  76
-Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Ellen Shea
+GroupNumbersCanastaTango  Canasta Tango  67
+Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Ellen Shea, Elaine Zhang
 
 AndyHuang  Andy Huang  96
 Andy Huang
@@ -61,13 +61,13 @@ Diane Brancazio
 SarahDon  Sarah Don  134
 Sarah Don
 
-GroupNumbersBollywood  Bollywood  189
+GroupNumbersBollywood  Salaam-E-Ishq  189
 Mickey Barry, Maureen FountainQuinn, Nidhi Juthani, Jessica Kesner, Phil Michael, Amy Mossman, Jean Sack, Ellen Shea, Linda Warner, Cydney Wong
 
 DianeZhou  Moments  166
 Diane Zhou
 
-KylieYing  Kylie Ying  187
+KylieYing  Kylie Ying  180
 Kylie Ying
 
 AislinnMunck  Dear lord let me stay on my feet :)  132
@@ -79,8 +79,8 @@ Flora Su
 TetsuyaKaji  Tetsuya Kaji  150
 Tetsuya Kaji
 
-GroupNumbersHickoryHoedown  Hickory Hoedown  120
-Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
+GroupNumbersHickoryHoedown  Hickory Hoedown  78
+Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
 
 MichelleLiu  sorry, I was thinking about Hellshake Yano  128
 Michelle Liu
@@ -88,6 +88,6 @@ Michelle Liu
 ElinSchranAislinnMunckKristinGallas  Promise  157
 Kristin Gallas, Aislinn Munck, Elin Schran
 
-GroupNumbersAdvancedNumber  Advanced Number  180
+GroupNumbersAdvancedNumber  Advanced Number  185
 Sabina Chen, Flora Su, Shannen Wu, Olivia Yao, Kylie Ying, Diane Zhou
 

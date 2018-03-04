@@ -178,6 +178,10 @@ def parse_group_numbers(schedule):
                 start.name = group_number_match.group(1)
                 if start.name == "Matrix":  # TODO fix survey setup next year
                     start.name = "The Matrix"
+                elif start.name == "Bollywood":
+                    start.name = "Salaam-E-Ishq"
+                elif start.name == "Advanced Number":
+                    "Synchronized Hockey Pump Up Figure Skating"
                 group_numbers[column] = start
         for row in reader:
             first_name = row["First Name"].strip()
