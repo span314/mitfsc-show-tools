@@ -1,5 +1,5 @@
 GroupNumbersOpeningNumber  Opening Number  104
-Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
+Diane Brancazio, Jane Codman, Kenny Derek, Maureen FountainQuinn, Andy Huang, Nidhi Juthani, Bonny Kellermann, Mia LaRocca, David Liu, Jonathan Lyles, Phil Michael, Shawn Pan, Noa Rensing, Ellen Shea, Flora Su, Brooke Tam, Elaine Zhang
 
 OliviaYao  Olivia Yao  134
 Olivia Yao
@@ -35,7 +35,7 @@ ShawnPan  Shawn Pan  98
 Shawn Pan
 
 GroupNumbersCanastaTango  Canasta Tango  67
-Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Ellen Shea, Elaine Zhang
+Mickey Barry, Kenny Derek, Ava LaRocca, Mia LaRocca, Alex Landsman, David Liu, Jonathan Lyles, Amy Mossman, Ellen Shea, Elaine Zhang
 
 AndyHuang  Andy Huang  96
 Andy Huang
