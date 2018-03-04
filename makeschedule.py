@@ -181,7 +181,7 @@ def parse_group_numbers(schedule):
                 elif start.name == "Bollywood":
                     start.name = "Salaam-E-Ishq"
                 elif start.name == "Advanced Number":
-                    "Synchronized Hockey Pump Up Figure Skating"
+                    start.name = "Synchronized Hockey Pump Up Figure Skating"
                 group_numbers[column] = start
         for row in reader:
             first_name = row["First Name"].strip()
@@ -212,7 +212,7 @@ def parse_starts(schedule):
             else:
                 length = 0
                 music_url = music
-            blurb = strip_nonprintable("Introduction Blurb for Announcer")
+            blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
             if names:
                 key = build_key(names)
             else:
