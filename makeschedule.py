@@ -195,6 +195,8 @@ def parse_group_numbers(schedule):
             for column, group_number in group_numbers.iteritems():
                 if row[column]:
                     group_number.participants.add(skater)
+                else:
+                    group_number.participants.discard(skater)
 
 
 def parse_starts(schedule):

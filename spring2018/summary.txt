@@ -52,11 +52,11 @@ Intermission  Intermission  1080
 GroupNumbersStarlightWaltz  Starlight Waltz  109
 Shawn Pan, Cydney Wong, Kylie Ying, Diane Zhou
 
-ShannenWu  Gravity  165
-Shannen Wu
-
 DianeBrancazio  Diane Brancazio  105
 Diane Brancazio
+
+ShannenWu  Gravity  165
+Shannen Wu
 
 SarahDon  Sarah Don  134
 Sarah Don
@@ -80,7 +80,7 @@ TetsuyaKaji  Tetsuya Kaji  150
 Tetsuya Kaji
 
 GroupNumbersHickoryHoedown  Hickory Hoedown  78
-Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Alex Landsman, Jonathan Lyles, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
+Maureen FountainQuinn, Ava LaRocca, Mia LaRocca, Alex Landsman, Amy Mossman, Shawn Pan, Jean Sack, Brooke Tam, Linda Warner
 
 MichelleLiu  sorry, I was thinking about Hellshake Yano  128
 Michelle Liu
