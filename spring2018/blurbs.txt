@@ -80,10 +80,7 @@ MISSING BLURB
 
 The Matrix
 Sabina Chen, Tetsuya Kaji, Ananya Nandy, Flora Su, Diane Zhou
-MISSING BLURB
-
-
-
+MIT is like the Matrix. Neo enters the Matrix as an innocent, ignorant person; he meets superhuman comrades and hard-to-beat agents, experiences mind-blowing realizations; and in the end, Neo himself becomes an almighty superpower in the world. Yes, the same line holds by replacing the Matrix with MIT, agents with psets, and Neo with you. This number is inspired as much by our own experiences at MIT as by the movie The Matrix, and is dedicated to all of you, who were bold enough to take the red pills and shared your curiosity to find "the truth."
 
 Intermission
 
