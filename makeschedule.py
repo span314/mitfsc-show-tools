@@ -309,12 +309,14 @@ def output_blurbs(schedule):
         for start in schedule.sorted_starts():
             f.write(start.name)
             f.write("\n")
-            f.write(start.sorted_participants())
-            f.write("\n")
+            participants = start.sorted_participants()
+            if participants != start.name:
+                f.write(participants)
+                f.write("\n")
             if start.blurb:
                 f.write(start.blurb)
             else:
-                f.write("MISSING BLURB\n\n\n")
+                f.write("MISSING BLURB\n\n\n\n\n\n")
             f.write("\n\n")
 
 
