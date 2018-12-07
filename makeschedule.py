@@ -111,6 +111,8 @@ def strip_nonprintable(s):
 
 
 def download_music(schedule):
+    if not os.path.exists(schedule.music_directory):
+        os.mkdir(schedule.music_directory)
     for start in schedule.starts.values():
         music_path = os.path.join(schedule.music_directory, start.music_filename + ".mp3")
 
@@ -176,12 +178,6 @@ def parse_group_numbers(schedule):
             if group_number_match:
                 start = schedule.starts[build_key(column)]
                 start.name = group_number_match.group(1)
-                if start.name == "Matrix":  # TODO fix survey setup next year
-                    start.name = "The Matrix"
-                elif start.name == "Bollywood":
-                    start.name = "Salaam-E-Ishq"
-                elif start.name == "Advanced Number":
-                    start.name = "Synchronized Hockey Pump Up Figure Skating"
                 group_numbers[column] = start
         for row in reader:
             first_name = row["First Name"].strip()
@@ -215,10 +211,10 @@ def parse_starts(schedule):
                 length = 0
                 music_url = music
             blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
-            if names:
-                key = build_key(names)
-            else:
+            if title and title.startswith("Group Number"):
                 key = build_key(title)
+            else:
+                key = build_key(names)
             music_filename = key + str(i)
 
             start = schedule.starts[key]
@@ -285,6 +281,7 @@ def output_keys(schedule):
     keys_out = os.path.join(schedule.directory, "keys.txt")
     with open(keys_out, "w") as f:
         for start in schedule.sorted_starts():
+            print start
             f.write(start.key)
             f.write("\n")
 
@@ -336,13 +333,16 @@ def output_program(schedule):
 
 
 def prepare_music_for_disk(schedule):
+    ordered_music_directory = schedule.music_directory + "_ordered"
+    if not os.path.exists(ordered_music_directory):
+        os.mkdir(ordered_music_directory)
     track = 0
     for start in schedule.sorted_starts():
         music_path = os.path.join(schedule.music_directory, start.music_filename + ".mp3")
         if os.path.exists(music_path):
             track += 1
             new_filename = "{:02d}_{}.mp3".format(track, start.key)
-            new_music_path = os.path.join(schedule.music_directory + "_ordered", new_filename)
+            new_music_path = os.path.join(ordered_music_directory, new_filename)
             shutil.copy(music_path, new_music_path)
             mp3_file = eyed3.load(new_music_path)
             mp3_file.tag.track = track
@@ -353,15 +353,15 @@ def prepare_music_for_disk(schedule):
 ### WORKFLOW ###
 ################
 
-spring2018show = Schedule("spring2018", datetime.datetime(2018, 3, 4, 5, 35))
-parse_starts(spring2018show)
-parse_group_numbers(spring2018show)
-parse_skate_order(spring2018show)
-download_music(spring2018show)
-output_keys(spring2018show)
-output_summary(spring2018show)
-output_schedule(spring2018show)
-output_blurbs(spring2018show)
-output_program(spring2018show)
-prepare_music_for_disk(spring2018show)
+winter2018show = Schedule("winter2018", datetime.datetime(2018, 12, 9, 1, 05))
+parse_starts(winter2018show)
+parse_group_numbers(winter2018show)
+parse_skate_order(winter2018show)
+download_music(winter2018show)
+output_keys(winter2018show)
+output_summary(winter2018show)
+output_schedule(winter2018show)
+output_blurbs(winter2018show)
+output_program(winter2018show)
+prepare_music_for_disk(winter2018show)
 
