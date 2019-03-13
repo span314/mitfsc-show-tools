@@ -47,7 +47,7 @@ class Start(object):
         self.key = ""
         self.music_filename = ""
         self.music_url = ""
-        self.length_seconds = 0
+        self.length_seconds = 120  # placeholder time if no music submitted yet
         self.blurb = ""
         self.name = ""
         self.participants = set()
@@ -120,7 +120,7 @@ def download_music(schedule):
             print "Found cached music for " + start.key
         else:
             if not start.music_url:
-                continue  #TODO fix
+                continue  # TODO fix
             parsed_url = urlparse.urlparse(start.music_url)
             if parsed_url.netloc == "drive.google.com":
                 query_params = urlparse.parse_qs(parsed_url.query)
@@ -200,7 +200,7 @@ def parse_starts(schedule):
     with open(input_survey_path, "r") as file_in:
         reader = csv.DictReader(file_in)
         for i, row in enumerate(reader):
-            names = row["Name(s)"]
+            names = row["Skater Name(s)"]
             title = strip_nonprintable(row["Program Title (optional)"])
             title = title if title else names
             music = row["Music Upload"]
@@ -211,7 +211,7 @@ def parse_starts(schedule):
                 length = 0
                 music_url = music
             blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
-            if title and title.startswith("Group Number"):
+            if names == "MIT Figure Skating Club" and title:
                 key = build_key(title)
             else:
                 key = build_key(names)
@@ -240,7 +240,9 @@ def parse_starts(schedule):
                     skater = schedule.skaters[skater_key]
                     if not skater.first_name:
                         skater_name_parts = skater_name.strip().split(" ")
-                        if len(skater_name_parts) == 2:
+                        if skater_name == "MIT Figure Skating Club":
+                            skater.first_name = "MIT Figure Skating Club"
+                        elif len(skater_name_parts) == 2:
                             skater.first_name, skater.last_name = skater_name_parts
                         elif len(skater_name_parts) == 1:
                             skater.first_name = skater_name_parts[0]
@@ -353,15 +355,15 @@ def prepare_music_for_disk(schedule):
 ### WORKFLOW ###
 ################
 
-winter2018show = Schedule("winter2018", datetime.datetime(2018, 12, 9, 1, 05))
-parse_starts(winter2018show)
-parse_group_numbers(winter2018show)
-parse_skate_order(winter2018show)
-download_music(winter2018show)
-output_keys(winter2018show)
-output_summary(winter2018show)
-output_schedule(winter2018show)
-output_blurbs(winter2018show)
-output_program(winter2018show)
-prepare_music_for_disk(winter2018show)
+spring2019show = Schedule("spring2019", datetime.datetime(2019, 3, 16, 18, 05))
+parse_starts(spring2019show)
+# parse_group_numbers(spring2019show)
+parse_skate_order(spring2019show)
+download_music(spring2019show)
+output_keys(spring2019show)
+output_summary(spring2019show)
+output_schedule(spring2019show)
+output_blurbs(spring2019show)
+output_program(spring2019show)
+# prepare_music_for_disk(spring2019show)
 
