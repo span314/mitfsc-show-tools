@@ -47,7 +47,7 @@ class Start(object):
         self.key = ""
         self.music_filename = ""
         self.music_url = ""
-        self.length_seconds = 120  # placeholder time if no music submitted yet
+        self.length_seconds = 0
         self.blurb = ""
         self.name = ""
         self.participants = set()
@@ -211,7 +211,9 @@ def parse_starts(schedule):
                 length = 0
                 music_url = music
             blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
-            if names == "MIT Figure Skating Club" and title:
+            if names == "Group" and title:
+                key = build_key(title)
+            elif names == "Intermission":
                 key = build_key(title)
             else:
                 key = build_key(names)
@@ -240,8 +242,8 @@ def parse_starts(schedule):
                     skater = schedule.skaters[skater_key]
                     if not skater.first_name:
                         skater_name_parts = skater_name.strip().split(" ")
-                        if skater_name == "MIT Figure Skating Club":
-                            skater.first_name = "MIT Figure Skating Club"
+                        if skater_name == "Group" or skater_name == "Intermission":
+                            pass
                         elif len(skater_name_parts) == 2:
                             skater.first_name, skater.last_name = skater_name_parts
                         elif len(skater_name_parts) == 1:
@@ -270,12 +272,12 @@ def output_schedule(schedule):
             f.write("         ")
             f.write(start.sorted_participants())
             f.write("\n")
-            if len(start.participants) == 0:
+            if start.name == "Intermission":
                 transition = 0
-            elif len(start.participants) < 5:
+            elif 0 < len(start.participants) < 5:
                 transition = max(40, 15 + len(start.blurb) / 10)
             else:
-                transition = max(90, 15 + len(start.blurb) / 10)
+                transition = max(80, 15 + len(start.blurb) / 10)
             start_time += datetime.timedelta(seconds=start.length_seconds + transition)
 
 
