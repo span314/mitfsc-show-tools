@@ -24,9 +24,6 @@ class Skater(object):
         self.last_name = ""
         self.email = ""
 
-    def full_name(self):
-        return "{} {}".format(self.first_name, self.last_name)
-
     def __cmp__(self, other):
         last_name_cmp = cmp(self.last_name, other.last_name)
         if last_name_cmp:
@@ -51,10 +48,10 @@ class Start(object):
         self.blurb = ""
         self.name = ""
         self.participants = set()
+        self.participant_subgroup = dict()
         self.scratch = False
-
-    def sorted_participants(self):
-        return ", ".join([p.full_name() for p in sorted(self.participants)])
+        self.category = None
+        self.has_title = False
 
     def __repr__(self):
         return str(self)
@@ -201,8 +198,8 @@ def parse_starts(schedule):
         reader = csv.DictReader(file_in)
         for i, row in enumerate(reader):
             names = row["Skater Name(s)"]
+            category = row["Category"]
             title = strip_nonprintable(row["Program Title (optional)"])
-            title = title if title else names
             music = row["Music Upload"]
             if music.isdigit():
                 length = int(music)
@@ -211,9 +208,7 @@ def parse_starts(schedule):
                 length = 0
                 music_url = music
             blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
-            if names == "Group" and title:
-                key = build_key(title)
-            elif names == "Intermission":
+            if category == "group" or category == "intermission":
                 key = build_key(title)
             else:
                 key = build_key(names)
@@ -221,10 +216,15 @@ def parse_starts(schedule):
 
             start = schedule.starts[key]
             start.key = key
+            start.category = category
             start.music_filename = music_filename
 
             if title:
                 start.name = title
+                start.has_title = True
+            else:
+                start.name = names
+                start.has_title = False
             if music_url:
                 start.music_url = music_url
             if length:
@@ -233,24 +233,45 @@ def parse_starts(schedule):
                 start.blurb = blurb
             start.order = i
 
-            if title.startswith("SCRATCH"):  #TODO fix hack
+            if category == "scratch":
                 start.scratch = True
 
-            for skater_name in names.split(","):
-                if skater_name:
-                    skater_key = build_key(skater_name)
-                    skater = schedule.skaters[skater_key]
-                    if not skater.first_name:
-                        skater_name_parts = skater_name.strip().split(" ")
-                        if skater_name == "Group" or skater_name == "Intermission":
-                            pass
-                        elif len(skater_name_parts) == 2:
-                            skater.first_name, skater.last_name = skater_name_parts
-                        elif len(skater_name_parts) == 1:
-                            skater.first_name = skater_name_parts[0]
-                        else:
-                            print "ERROR TODO handle name parsing better: " + skater_name
-                    start.participants.add(skater)
+            for subgroup_header, subgroup_names in split_subgroups(names).iteritems():
+                subgroup_skaters = set()
+                for skater_name in subgroup_names:
+                    if skater_name:
+                        skater_key = build_key(skater_name)
+                        skater = schedule.skaters[skater_key]
+                        if not skater.first_name:
+                            skater_name_parts = [n.replace("_", " ") for n in skater_name.strip().split(" ")]
+                            if len(skater_name_parts) == 2:
+                                skater.first_name, skater.last_name = skater_name_parts
+                            elif len(skater_name_parts) == 1:
+                                skater.first_name = skater_name_parts[0]
+                            else:
+                                print "ERROR TODO handle name parsing better: " + skater_name
+                        subgroup_skaters.add(skater)
+                start.participants.update(subgroup_skaters)
+                start.participant_subgroup[subgroup_header] = subgroup_skaters
+
+
+def split_subgroups(names):
+    subgroups = dict()
+
+    subgroup_parts = names.split(":")
+    if len(subgroup_parts) % 2 == 1:
+        subgroup_parts = ["default"] + subgroup_parts
+
+    for i in range(0, len(subgroup_parts), 2):
+        subgroup_header = subgroup_parts[i]
+        subgroup_names = subgroup_parts[i + 1]
+        subgroups[subgroup_header] = subgroup_names.split(",")
+
+    return subgroups
+
+
+def join_names(skaters, skater_sep=", ", name_sep=" "):
+    return skater_sep.join([name_sep.join([p.first_name, p.last_name]) for p in sorted(skaters)])
 
 
 def parse_skate_order(schedule):
@@ -270,14 +291,15 @@ def output_schedule(schedule):
             f.write(start.name)
             f.write("\n")
             f.write("         ")
-            f.write(start.sorted_participants())
+            f.write(join_names(start.participants))
             f.write("\n")
-            if start.name == "Intermission":
+            if start.category == "intermission":
                 transition = 0
             elif 0 < len(start.participants) < 5:
                 transition = max(40, 15 + len(start.blurb) / 10)
             else:
                 transition = max(80, 15 + len(start.blurb) / 10)
+            print(start.name, start.length_seconds, transition)
             start_time += datetime.timedelta(seconds=start.length_seconds + transition)
 
 
@@ -300,7 +322,7 @@ def output_summary(schedule):
             f.write("  ")
             f.write(str(start.length_seconds))
             f.write("\n")
-            f.write(start.sorted_participants())
+            f.write(join_names(start.participants))
             f.write("\n\n")
 
 
@@ -310,7 +332,7 @@ def output_blurbs(schedule):
         for start in schedule.sorted_starts():
             f.write(start.name)
             f.write("\n")
-            participants = start.sorted_participants()
+            participants = join_names(start.participants)
             if participants != start.name:
                 f.write(participants)
                 f.write("\n")
@@ -326,9 +348,17 @@ def output_program(schedule):
         for program_row in pin:
             if program_row == "%!!!PROGRAMCONTENT\n":
                 for start in schedule.sorted_starts():
-                    participants = start.sorted_participants()
-                    if participants == start.name:
-                        participants = ""
+                    if start.category == "intermission":
+                        pout.write("\\vfill\\null\n")
+                        pout.write("\\columnbreak\n")
+                    participants = ""
+                    if start.has_title:
+                        for subgroup_header, subgroup_participants in start.participant_subgroup.iteritems():
+                            if subgroup_header != "default":
+                                participants += ("\\textbf{" + subgroup_header + ":} ")
+                            participants += join_names(subgroup_participants, name_sep="~")
+                            if subgroup_header != "default":
+                                participants += "\\\\"
                     pout.write("\\programnumber{" + start.name + "}{" + participants + "}\n")
             else:
                 pout.write(program_row)
