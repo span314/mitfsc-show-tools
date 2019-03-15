@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 import csv
 import datetime
 import eyed3  # mp3 tag editor
@@ -23,8 +23,12 @@ class Skater(object):
         self.first_name = ""
         self.last_name = ""
         self.email = ""
+        self.order = 0
 
     def __cmp__(self, other):
+        order_cmp = cmp(self.order, other.order)
+        if order_cmp:
+            return order_cmp
         last_name_cmp = cmp(self.last_name, other.last_name)
         if last_name_cmp:
             return last_name_cmp
@@ -48,7 +52,7 @@ class Start(object):
         self.blurb = ""
         self.name = ""
         self.participants = set()
-        self.participant_subgroup = dict()
+        self.participant_subgroup = OrderedDict()
         self.scratch = False
         self.category = None
         self.has_title = False
@@ -236,9 +240,10 @@ def parse_starts(schedule):
             if category == "scratch":
                 start.scratch = True
 
-            for subgroup_header, subgroup_names in split_subgroups(names).iteritems():
-                subgroup_skaters = set()
-                for skater_name in subgroup_names:
+            subgroups = split_subgroups(names)
+            for subgroup_header, subgroup_names in subgroups.iteritems():
+                subgroup_skaters = []
+                for order, skater_name in enumerate(subgroup_names):
                     if skater_name:
                         skater_key = build_key(skater_name)
                         skater = schedule.skaters[skater_key]
@@ -250,13 +255,15 @@ def parse_starts(schedule):
                                 skater.first_name = skater_name_parts[0]
                             else:
                                 print "ERROR TODO handle name parsing better: " + skater_name
-                        subgroup_skaters.add(skater)
+                        if len(subgroups) == 1 and len(subgroup_names) == 2:
+                            skater.order = order
+                        subgroup_skaters.append(skater)
                 start.participants.update(subgroup_skaters)
                 start.participant_subgroup[subgroup_header] = subgroup_skaters
 
 
 def split_subgroups(names):
-    subgroups = dict()
+    subgroups = OrderedDict()
 
     subgroup_parts = names.split(":")
     if len(subgroup_parts) % 2 == 1:
@@ -299,7 +306,6 @@ def output_schedule(schedule):
                 transition = max(40, 15 + len(start.blurb) / 10)
             else:
                 transition = max(80, 15 + len(start.blurb) / 10)
-            print(start.name, start.length_seconds, transition)
             start_time += datetime.timedelta(seconds=start.length_seconds + transition)
 
 
@@ -356,9 +362,7 @@ def output_program(schedule):
                         for subgroup_header, subgroup_participants in start.participant_subgroup.iteritems():
                             if subgroup_header != "default":
                                 participants += ("\\textbf{" + subgroup_header + ":} ")
-                            participants += join_names(subgroup_participants, name_sep="~")
-                            if subgroup_header != "default":
-                                participants += "\\\\"
+                            participants += join_names(subgroup_participants, name_sep="~") + " "
                     pout.write("\\programnumber{" + start.name + "}{" + participants + "}\n")
             else:
                 pout.write(program_row)
