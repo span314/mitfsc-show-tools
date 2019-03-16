@@ -1,11 +1,11 @@
 06:05:00 Opening Number
-         
+         Aviva Benson, Diane Brancazio, Judyta Cichocka, Esther Horwich, Destinee Hung, Bonny Kellermann, David Lin, Phil Michael, Shawn Pan, Alex Poret, Philip Tran, Edmund Williams, Hong Xiang, Baula Xu
 06:08:40 Olivia Yao
          Olivia Yao
 06:12:10 Ananya Nandy
          Ananya Nandy
 06:15:19 Paso Doble
-         
+         Juliana Drozd, Esther Horwich, Andy Huang, Nidhi Juthani, Jessica Kesner, Ava LaRocca, Mia LaRocca, Stef Ren
 06:17:55 Andrea Lin
          Andrea Lin
 06:20:47 California Dreamin'
@@ -17,11 +17,11 @@
 06:29:49 Don't You Forget About Me
          Jessica Kesner
 06:33:58 Canasta Tango
-         
+         Mickey Barry, Destinee Hung, Alex Landsman, David Lin, Alex Poret, Susan Scott, Philip Tran, Edmund Williams, Baula Xu
 06:36:52 Mia LaRocca
          Mia LaRocca
 06:39:17 Ten Fox
-         Stef Ren, Shawn Pan
+         Shawn Pan, Stef Ren
 06:41:06 Shut Up and Dance
          Juliana Drozd, Andy Huang
 06:43:50 Barricades
@@ -33,7 +33,7 @@
 07:00:21 The Promise
          Flora Su
 07:03:53 Swing Dance
-         
+         Mickey Barry, Aviva Benson, Dave Brancazio, Diane Brancazio, Maureen Fountain Quinn, Esther Horwich, Destinee Hung, Ava LaRocca, Mia LaRocca, Alex Landsman, David Lin, Shawn Pan, Susan Scott, Philip Tran, Edmund Williams, Baula Xu
 07:07:48 Maya Sankar
          Maya Sankar
 07:10:06 Winter is here
@@ -47,7 +47,7 @@
 07:21:00 Kylie Ying
          Kylie Ying
 07:23:49 Flora's Secret
-         Flora Su, Shawn Pan
+         Shawn Pan, Flora Su
 07:25:57 Jodi Beggs
          Jodi Beggs
 07:29:49 Blue Dress

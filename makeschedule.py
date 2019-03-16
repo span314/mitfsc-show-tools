@@ -26,9 +26,6 @@ class Skater(object):
         self.order = 0
 
     def __cmp__(self, other):
-        order_cmp = cmp(self.order, other.order)
-        if order_cmp:
-            return order_cmp
         last_name_cmp = cmp(self.last_name, other.last_name)
         if last_name_cmp:
             return last_name_cmp
@@ -243,7 +240,7 @@ def parse_starts(schedule):
             subgroups = split_subgroups(names)
             for subgroup_header, subgroup_names in subgroups.iteritems():
                 subgroup_skaters = []
-                for order, skater_name in enumerate(subgroup_names):
+                for skater_name in subgroup_names:
                     if skater_name:
                         skater_key = build_key(skater_name)
                         skater = schedule.skaters[skater_key]
@@ -255,8 +252,6 @@ def parse_starts(schedule):
                                 skater.first_name = skater_name_parts[0]
                             else:
                                 print "ERROR TODO handle name parsing better: " + skater_name
-                        if len(subgroups) == 1 and len(subgroup_names) == 2:
-                            skater.order = order
                         subgroup_skaters.append(skater)
                 start.participants.update(subgroup_skaters)
                 start.participant_subgroup[subgroup_header] = subgroup_skaters
@@ -270,15 +265,19 @@ def split_subgroups(names):
         subgroup_parts = ["default"] + subgroup_parts
 
     for i in range(0, len(subgroup_parts), 2):
-        subgroup_header = subgroup_parts[i]
-        subgroup_names = subgroup_parts[i + 1]
-        subgroups[subgroup_header] = subgroup_names.split(",")
+        subgroup_header = subgroup_parts[i].strip()
+        subgroup_names = subgroup_parts[i + 1].strip()
+        subgroups[subgroup_header] = [n.strip() for n in subgroup_names.split(",")]
 
     return subgroups
 
 
-def join_names(skaters, skater_sep=", ", name_sep=" "):
-    return skater_sep.join([name_sep.join([p.first_name, p.last_name]) for p in sorted(skaters)])
+def join_names(skaters, skater_sep=", ", name_sep=" ", should_sort=True):
+    if should_sort:
+        processed_skaters = sorted(skaters)
+    else:
+        processed_skaters = skaters
+    return skater_sep.join([name_sep.join([p.first_name, p.last_name]) for p in processed_skaters])
 
 
 def parse_skate_order(schedule):
@@ -359,7 +358,7 @@ def output_program(schedule):
                         for subgroup_header, subgroup_participants in start.participant_subgroup.iteritems():
                             if subgroup_header != "default":
                                 participants.append("\\vspace{0.05in} \\textbf{" + subgroup_header + "} ")
-                            participants.append(join_names(subgroup_participants, name_sep="~") + " ")
+                            participants.append(join_names(subgroup_participants, name_sep="~", should_sort=(len(subgroup_participants) > 2)) + " ")
                     pout.write("\\programnumber{" + start.name + "}{" + "\\\\".join(participants) + "}\n")
                     if start.category == "intermission":
                         pout.write("\\vfill\\null\n")
@@ -401,5 +400,5 @@ output_summary(spring2019show)
 output_schedule(spring2019show)
 output_blurbs(spring2019show)
 output_program(spring2019show)
-prepare_music_for_disk(spring2019show)
+# prepare_music_for_disk(spring2019show)
 
