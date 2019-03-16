@@ -354,16 +354,16 @@ def output_program(schedule):
         for program_row in pin:
             if program_row == "%!!!PROGRAMCONTENT\n":
                 for start in schedule.sorted_starts():
-                    if start.category == "intermission":
-                        pout.write("\\vfill\\null\n")
-                        pout.write("\\columnbreak\n")
-                    participants = ""
+                    participants = []
                     if start.has_title:
                         for subgroup_header, subgroup_participants in start.participant_subgroup.iteritems():
                             if subgroup_header != "default":
-                                participants += ("\\textbf{" + subgroup_header + ":} ")
-                            participants += join_names(subgroup_participants, name_sep="~") + " "
-                    pout.write("\\programnumber{" + start.name + "}{" + participants + "}\n")
+                                participants.append("\\vspace{0.05in} \\textbf{" + subgroup_header + "} ")
+                            participants.append(join_names(subgroup_participants, name_sep="~") + " ")
+                    pout.write("\\programnumber{" + start.name + "}{" + "\\\\".join(participants) + "}\n")
+                    if start.category == "intermission":
+                        pout.write("\\vfill\\null\n")
+                        pout.write("\\columnbreak\n")
             else:
                 pout.write(program_row)
                 pout.write("\n")

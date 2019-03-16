@@ -1,10 +1,10 @@
 OpeningNumber
 OliviaYao
-ShannenWu
+AnanyaNandy
 PasoDoble
 AndreaLin
+ShannenWu
 ShawnPan
-AnanyaNandy
 AndyHuang
 JessicaKesner
 CanastaTango
@@ -13,8 +13,8 @@ StefRenShawnPan
 JulianaDrozdAndyHuang
 Barricades
 Intermission
-FloraSu
 JieruiFangStefRen
+FloraSu
 SwingDance
 MayaSankar
 NidhiJuthani

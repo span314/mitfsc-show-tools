@@ -4,8 +4,8 @@ OpeningNumber  Opening Number  140
 OliviaYao  Olivia Yao  170
 Olivia Yao
 
-ShannenWu  California Dreamin'  172
-Shannen Wu
+AnanyaNandy  Ananya Nandy  149
+Ananya Nandy
 
 PasoDoble  Paso Doble  120
 
@@ -13,11 +13,11 @@ PasoDoble  Paso Doble  120
 AndreaLin  Andrea Lin  132
 Andrea Lin
 
+ShannenWu  California Dreamin'  172
+Shannen Wu
+
 ShawnPan  Shawn Pan  129
 Shawn Pan
-
-AnanyaNandy  Ananya Nandy  150
-Ananya Nandy
 
 AndyHuang  Andy Huang  121
 Andy Huang
@@ -40,14 +40,14 @@ Juliana Drozd, Andy Huang
 Barricades  Barricades  176
 Sabina Chen, Flora Su, Diane Zhou
 
-Intermission  Intermission  480
+Intermission  Intermission  600
 
-
-FloraSu  The Promise  169
-Flora Su
 
 JieruiFangStefRen  Jierui Fang, Stef Ren  106
 Jierui Fang, Stef Ren
+
+FloraSu  The Promise  169
+Flora Su
 
 SwingDance  Swing Dance  155
 
@@ -67,13 +67,13 @@ Stef Ren
 DianeBrancazio  Diane Brancazio  101
 Diane Brancazio
 
-KylieYing  Kylie Ying  150
+KylieYing  Kylie Ying  129
 Kylie Ying
 
 FloraSuShawnPan  Flora's Secret  82
 Flora Su, Shawn Pan
 
-JodiBeggs  Jodi Beggs  150
+JodiBeggs  Jodi Beggs  192
 Jodi Beggs
 
 JulianaDrozd  Blue Dress  240
