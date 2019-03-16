@@ -401,5 +401,5 @@ output_summary(spring2019show)
 output_schedule(spring2019show)
 output_blurbs(spring2019show)
 output_program(spring2019show)
-# prepare_music_for_disk(spring2019show)
+prepare_music_for_disk(spring2019show)
 

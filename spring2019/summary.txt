@@ -7,7 +7,7 @@ Olivia Yao
 AnanyaNandy  Ananya Nandy  149
 Ananya Nandy
 
-PasoDoble  Paso Doble  120
+PasoDoble  Paso Doble  76
 
 
 AndreaLin  Andrea Lin  132
@@ -43,7 +43,7 @@ Sabina Chen, Flora Su, Diane Zhou
 Intermission  Intermission  600
 
 
-JieruiFangStefRen  Jierui Fang, Stef Ren  106
+JieruiFangStefRen  Shallow  106
 Jierui Fang, Stef Ren
 
 FloraSu  The Promise  169
@@ -79,7 +79,7 @@ Jodi Beggs
 JulianaDrozd  Blue Dress  240
 Juliana Drozd
 
-KevinShum  Kevin Shum  180
+KevinShum  Aranjuez  221
 Kevin Shum
 
 ClosingNumberTogetherfromAfar  Closing Number: Together from Afar  135
