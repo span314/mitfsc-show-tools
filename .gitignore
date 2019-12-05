@@ -2,6 +2,7 @@
 *.aux
 *.log
 *.mp3
+*.wav
 *.key
 *.pyc
 **/inputs/*
