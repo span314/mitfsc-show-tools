@@ -1,18 +1,13 @@
 #!/usr/bin/python
 from collections import defaultdict, OrderedDict
 import boto3
-import csv
 import datetime
 import eyed3  # mp3 tag editor
 import json
 import os
-import re
 import string
 import shutil
 import subprocess
-import urllib
-import urlparse
-from botocore.exceptions import ClientError
 
 # Generate program and skate order from signup spreadsheet
 # Also assumes you have ffmpeg and pdflatex installed
@@ -52,8 +47,6 @@ class Start(object):
         self.blurb = ""
         self.name = ""
         self.participants = set()
-        self.participant_subgroup = OrderedDict()
-        self.scratch = False
         self.category = None
         self.has_title = False
 
@@ -78,26 +71,8 @@ class Schedule(object):
 
     def sorted_starts(self):
         if not self.start_order:
-            return [s for s in self.starts.values() if not s.scratch]
+            return [s for s in self.starts.values()]
         return [self.starts[key] for key in self.start_order]
-
-
-# Download csv file if necessary (using google sheets key in filename.csv.key)
-def download_csv(directory, filename, cache=True):
-    path = os.path.join(directory, filename)
-    if cache and os.path.exists(path):
-        print "Using cached spreadsheet {}".format(filename)
-        return path
-    key_path = path + ".key"
-    if os.path.exists(key_path):
-        print "Downloading spreadsheet {}".format(filename)
-        with open(key_path, "r") as key_file:
-            spreadsheet_key = key_file.read().strip()
-        url = "https://docs.google.com/spreadsheets/d/" + spreadsheet_key + "/export?format=csv"
-        urllib.urlretrieve(url, path)
-        return path
-    else:
-        raise ValueError("Failed to find file {}".format(filename))
 
 
 def dump_dynamo_table(directory, table_name, cache=True):
@@ -185,34 +160,8 @@ def download_music(schedule):
         start.length_seconds = mp3_file.info.time_secs
 
 
-def parse_group_numbers(schedule):
-    input_survey_path = download_csv(schedule.input_directory, "group.csv")
-    with open(input_survey_path, "r") as file_in:
-        reader = csv.DictReader(file_in)
-        group_numbers = {}
-        for column in reader.fieldnames:
-            group_number_match = re.search("Group Numbers \\[(.*?)\\]", column)
-            if group_number_match:
-                start = schedule.starts[build_key(column)]
-                start.name = group_number_match.group(1)
-                group_numbers[column] = start
-        for row in reader:
-            first_name = row["First Name"].strip()
-            last_name = row["Last Name"].strip()
-            email = row["Email Address"].strip()
-            skater_key = build_key(first_name + last_name)
-            skater = schedule.skaters[skater_key]
-            skater.first_name = first_name
-            skater.last_name = last_name
-            skater.email = email
-            for column, group_number in group_numbers.iteritems():
-                if row[column]:
-                    group_number.participants.add(skater)
-                else:
-                    group_number.participants.discard(skater)
-
-
 def parse_starts(schedule):
+    print("Parsing Starts")
     input_survey_path = dump_dynamo_table(schedule.input_directory, "skating-survey-responses")
     responses = {}
     with open(input_survey_path, "r") as file_in:
@@ -237,128 +186,49 @@ def parse_starts(schedule):
                 print(start_json)
                 start = schedule.starts[start_json["id"]]
                 start.key = start_json["id"]
-                if start_json["title"]:
-                    start.title = start_json["title"].strip()
-                if start_json["blurb"]:
-                    start.blurb = start_json["blurb"].strip()
-                if start_json["musicFileName"]:
-                    start.music_filename = start_json["musicFileName"]  # TODO
+                if start_json["groupNumber"] and email != "groupnumbers@shawnpan.com":
+                    start.participants.add(skater)
+                else:
+                    if start_json["title"]:
+                        start.title = start_json["title"].strip()
+                    if start_json["blurb"]:
+                        start.blurb = start_json["blurb"].strip()
+                    if start_json["musicFileName"]:
+                        start.music_filename = start_json["musicFileName"]  # TODO
 
-                if start_json["skaters"]:
-                    subgroups = split_subgroups(start_json["skaters"])
-                    for subgroup_header, subgroup_names in subgroups.iteritems():
-                        subgroup_skaters = []
-                        for skater_name in subgroup_names:
+                    if start_json["skaters"]:
+                        skater_names = [n.strip() for n in start_json["skaters"].split(",")]
+                        for skater_name in skater_names:
                             if skater_name:
                                 skater_key = build_key(skater_name)
-                                skater2 = schedule.skaters[skater_key]
-                                if not skater2.first_name:
+                                participant = schedule.skaters[skater_key]
+                                # create new skater if necessary
+                                if not participant.first_name:
                                     skater_name_parts = [n.replace("_", " ") for n in skater_name.strip().split(" ")]
                                     if len(skater_name_parts) == 2:
-                                        skater2.first_name, skater2.last_name = skater_name_parts
+                                        participant.first_name, participant.last_name = skater_name_parts
                                     elif len(skater_name_parts) == 1:
-                                        skater2.first_name = skater_name_parts[0]
+                                        participant.first_name = skater_name_parts[0]
                                     else:
-                                        print "ERROR TODO handle name parsing better: " + skater_name
-                                subgroup_skaters.append(skater2)
-                        start.participants.update(subgroup_skaters)
-                        start.participant_subgroup[subgroup_header] = subgroup_skaters
-                elif email != "groupnumbers@shawnpan.com":
-                    start.participants.add(skater)
+                                        print "Use underscores to group names: " + skater_name  # TODO handle parsing better
+                                start.participants.add(participant)
+                    elif email != "groupnumbers@shawnpan.com":
+                        start.participants.add(skater)
 
-                if start.title:
-                    start.name = start.title
-                    start.has_title = True
-                else:
-                    # TODO fix
-                    start.has_title = False
-                    raise ValueError("start without title")
-                # start.order = i++
-                # strip_nonprintable?
-                # start_json["groupNumber"]
-
-    print(schedule.skaters)
+                    if start.title:
+                        start.name = start.title
+                        start.has_title = True
+                    else:
+                        # TODO fix
+                        start.has_title = False
+                        raise ValueError("start without title")
+                    # strip_nonprintable?
+    print ("Parsed Skaters")
+    for skater in schedule.skaters.itervalues():
+        print (skater)
+    print ("Parsed Starts")
     for start in schedule.starts.itervalues():
         print (start.key, start.title, start.participants)
-
-
-        #
-        #
-        #
-        # reader = csv.DictReader(file_in)
-        # for i, row in enumerate(reader):
-        #     names = row["Skater Name(s)"]
-        #     category = row["Category"]
-        #     title = strip_nonprintable(row["Program Title (optional)"])
-        #     music = row["Music Upload"]
-        #     if music.isdigit():
-        #         length = int(music)
-        #         music_url = ""
-        #     else:
-        #         length = 0
-        #         music_url = music
-        #     blurb = strip_nonprintable(row["Introduction Blurb for Announcer"])
-        #     if category == "group" or category == "intermission":
-        #         key = build_key(title)
-        #     else:
-        #         key = build_key(names)
-        #     music_filename = key + str(i)
-        #
-        #     start = schedule.starts[key]
-        #     start.key = key
-        #     start.category = category
-        #     start.music_filename = music_filename
-        #
-        #     if title:
-        #         start.name = title
-        #         start.has_title = True
-        #     else:
-        #         start.name = names
-        #         start.has_title = False
-        #     if music_url:
-        #         start.music_url = music_url
-        #     if length:
-        #         start.length_seconds = length
-        #     if blurb:
-        #         start.blurb = blurb
-        #     start.order = i
-        #
-        #     if category == "scratch":
-        #         start.scratch = True
-        #
-        #     subgroups = split_subgroups(names)
-        #     for subgroup_header, subgroup_names in subgroups.iteritems():
-        #         subgroup_skaters = []
-        #         for skater_name in subgroup_names:
-        #             if skater_name:
-        #                 skater_key = build_key(skater_name)
-        #                 skater = schedule.skaters[skater_key]
-        #                 if not skater.first_name:
-        #                     skater_name_parts = [n.replace("_", " ") for n in skater_name.strip().split(" ")]
-        #                     if len(skater_name_parts) == 2:
-        #                         skater.first_name, skater.last_name = skater_name_parts
-        #                     elif len(skater_name_parts) == 1:
-        #                         skater.first_name = skater_name_parts[0]
-        #                     else:
-        #                         print "ERROR TODO handle name parsing better: " + skater_name
-        #                 subgroup_skaters.append(skater)
-        #         start.participants.update(subgroup_skaters)
-        #         start.participant_subgroup[subgroup_header] = subgroup_skaters
-
-
-def split_subgroups(names):
-    subgroups = OrderedDict()
-
-    subgroup_parts = names.split(":")
-    if len(subgroup_parts) % 2 == 1:
-        subgroup_parts = ["default"] + subgroup_parts
-
-    for i in range(0, len(subgroup_parts), 2):
-        subgroup_header = subgroup_parts[i].strip()
-        subgroup_names = subgroup_parts[i + 1].strip()
-        subgroups[subgroup_header] = [n.strip() for n in subgroup_names.split(",")]
-
-    return subgroups
 
 
 def join_names(skaters, skater_sep=", ", name_sep=" ", should_sort=True):
@@ -451,10 +321,7 @@ def output_program(schedule):
                     print(start.name)
                     participants = []
                     if start.has_title:
-                        for subgroup_header, subgroup_participants in start.participant_subgroup.iteritems():
-                            if subgroup_header != "default":
-                                participants.append("\\vspace{0.05in} \\textbf{" + subgroup_header + "} ")
-                            participants.append(join_names(subgroup_participants, name_sep="~", should_sort=(len(subgroup_participants) > 2)) + " ")
+                        participants.append(join_names(start.participants, name_sep="~", should_sort=(len(start.participants) > 2)) + " ")
                     pout.write("\\programnumber{" + start.name + "}{" + "\\\\".join(participants) + "}\n")
                     if start.category == "intermission":
                         pout.write("\\vfill\\null\n")
@@ -488,13 +355,12 @@ def prepare_music_for_disk(schedule):
 
 show_schedule = Schedule("winter2019", datetime.datetime(2019, 12, 8, 17, 05))
 parse_starts(show_schedule)
-# parse_group_numbers(spring2019show) XXX
-parse_skate_order(show_schedule)
 download_music(show_schedule)
 output_keys(show_schedule)
+parse_skate_order(show_schedule)
 output_summary(show_schedule)
 output_schedule(show_schedule)
 output_blurbs(show_schedule)
 output_program(show_schedule)
-# prepare_music_for_disk(spring2019show)
+# prepare_music_for_disk(show_schedule)
 

@@ -1,18 +1,20 @@
 05:05:00 Opening Number
-         Destinee Hung, Bonny Kellermann, Mia LaRocca, Louise Lima, Shawn Pan, Alexandra Poret, Flora Su, Lili Sun, Diane Zhou
-05:06:20 Faded
-         Lili Sun
-05:07:00 The Promise
-         Flora Su
-05:10:37 Dutch Waltz
-         Louise Lima, Alexandra Poret
-05:11:17 Wings
-         Erina Yamaguchi
-05:15:02 Swing Dance
-         Juliana Drozd, Destinee Hung, Mia LaRocca, Shawn Pan, Flora Su
-05:17:47 You Will Be Found
-         Shannen Wu
-05:21:17 One Step Closer
-         Sabina Chen, Diane Zhou
-05:24:22 Juliana Drozd, Don't Rain on my Parade
+         Diane Brancazio, Destinee Hung, Bonny Kellermann, Mia LaRocca, Louise Lima, Shawn Pan, Alexandra Poret, Flora Su, Lili Sun, Diane Zhou
+05:08:28 Don't Rain on my Parade
          Juliana Drozd
+05:11:53 You Will Be Found
+         Shannen Wu
+05:15:23 The Promise
+         Flora Su
+05:19:00 Dutch Waltz
+         Louise Lima, Alexandra Poret
+05:21:02 Diane Brancazio
+         Diane Brancazio
+05:21:42 Faded
+         Lili Sun
+05:22:22 Wings
+         Erina Yamaguchi
+05:26:07 Swing Dance
+         Diane Brancazio, Juliana Drozd, Destinee Hung, Mia LaRocca, Shawn Pan, Flora Su
+05:28:52 One Step Closer
+         Sabina Chen, Diane Zhou

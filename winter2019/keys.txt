@@ -1,9 +1,10 @@
-e221a83f-2ee8-419c-af2f-6347ab544e82 Opening Number Louise Destinee Alexandra Bonny Mia Lili Shawn Diane Flora
-219048dd-0291-4017-955a-d2138a9649c0 Faded Lili
-dc98579a-5ad7-4882-bf80-bea9035964fa The Promise Flora
-cdef5e8e-62a0-41a5-873b-a503323b7055 Dutch Waltz Louise Alexandra
-c80e3aef-f065-4a39-ab0d-6435d77f9be1 Wings Erina
-c182da7e-4721-4218-a6f9-4f762bcc25c2 Swing Dance Mia Juliana Shawn Destinee Flora
 dfbbd3a3-7c5a-4d0b-9ca7-72e75dfbd32e You Will Be Found Shannen
+332f5131-5972-4719-9068-d72bf8d674d7 Don't Rain on my Parade Juliana
+219048dd-0291-4017-955a-d2138a9649c0 Faded Lili
+c80e3aef-f065-4a39-ab0d-6435d77f9be1 Wings Erina
 6a6922ff-d8fd-4add-9929-a6d1082ef162 One Step Closer Sabina Diane
-332f5131-5972-4719-9068-d72bf8d674d7 Juliana Drozd, Don't Rain on my Parade Juliana
+cdef5e8e-62a0-41a5-873b-a503323b7055 Dutch Waltz Louise Alexandra
+6c1bc2c4-7bba-42b5-a03b-43f75821450d Diane Brancazio Diane
+c182da7e-4721-4218-a6f9-4f762bcc25c2 Swing Dance Mia Shawn Diane Flora Juliana Destinee
+dc98579a-5ad7-4882-bf80-bea9035964fa The Promise Flora
+e221a83f-2ee8-419c-af2f-6347ab544e82 Opening Number Louise Destinee Lili Diane Shawn Flora Alexandra Bonny Diane Mia
