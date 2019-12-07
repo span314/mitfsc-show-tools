@@ -35,6 +35,9 @@ class Skater(object):
     def __str__(self):
         return "Skater: {} {}".format(self.first_name, self.last_name)
 
+    def full_name(self):
+        return self.first_name + " " + self.last_name
+
 
 # Group number or individual program
 class Start(object):
@@ -100,10 +103,8 @@ def dump_dynamo_table(directory, table_name, cache=True):
     return path
 
 
-# TODO multiple numbers by same person
 def build_key(names):
-    key = names
-    return "".join([c for c in key if c in string.ascii_letters])
+    return "".join([c for c in names if c in string.ascii_letters])
 
 
 # TODO fix unicode bugs
@@ -117,7 +118,7 @@ def download_music(schedule):
     s3 = boto3.client("s3")
     for start in schedule.starts.values():
         download_path = os.path.join(schedule.music_directory, start.key + "__" + start.music_filename)
-        music_path = os.path.join(schedule.music_directory, start.key + ".mp3")
+        music_path = os.path.join(schedule.music_directory, start.key + "_" + build_key(start.title) + ".mp3")
         if os.path.exists(music_path):
             print "Found cached music for " + start.key
         elif not start.music_filename:
@@ -175,7 +176,7 @@ def parse_starts(schedule):
     for email, response in responses.iteritems():
         print(email)
 
-        skater_key = build_key(response["firstName"] + response["lastName"])  # TODO email as key
+        skater_key = build_key(response["firstName"] + response["lastName"])
         skater = schedule.skaters[skater_key]
         skater.first_name = response["firstName"].strip()
         skater.last_name = response["lastName"].strip()
@@ -217,7 +218,7 @@ def parse_starts(schedule):
 
                     if start.title:
                         start.name = start.title
-                        start.has_title = True
+                        start.has_title = start.title != skater.full_name()
                     else:
                         # TODO fix
                         start.has_title = False

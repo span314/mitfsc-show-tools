@@ -1,5 +1,5 @@
 e221a83f-2ee8-419c-af2f-6347ab544e82  Opening Number  128
-Diane Brancazio, Destinee Hung, Bonny Kellermann, Mia LaRocca, Louise Lima, Shawn Pan, Alexandra Poret, Flora Su, Lili Sun, Diane Zhou
+Ilani Axelrod-Freed, Diane Brancazio, Sarah Chieng, Destinee Hung, Bonny Kellermann, Mia LaRocca, Louise Lima, Shawn Pan, Alexandra Poret, Flora Su, Lili Sun, Philip Tran, Liza Tremsina, Diane Zhou
 
 332f5131-5972-4719-9068-d72bf8d674d7  Don't Rain on my Parade  165
 Juliana Drozd
@@ -11,9 +11,9 @@ dc98579a-5ad7-4882-bf80-bea9035964fa  The Promise  169
 Flora Su
 
 cdef5e8e-62a0-41a5-873b-a503323b7055  Dutch Waltz  82
-Louise Lima, Alexandra Poret
+Ilani Axelrod-Freed, Louise Lima, Alexandra Poret, Philip Tran
 
-6c1bc2c4-7bba-42b5-a03b-43f75821450d  Diane Brancazio  0
+6c1bc2c4-7bba-42b5-a03b-43f75821450d  Diane Brancazio  101
 Diane Brancazio
 
 219048dd-0291-4017-955a-d2138a9649c0  Faded  0
@@ -23,7 +23,7 @@ c80e3aef-f065-4a39-ab0d-6435d77f9be1  Wings  185
 Erina Yamaguchi
 
 c182da7e-4721-4218-a6f9-4f762bcc25c2  Swing Dance  85
-Diane Brancazio, Juliana Drozd, Destinee Hung, Mia LaRocca, Shawn Pan, Flora Su
+Diane Brancazio, Juliana Drozd, Destinee Hung, Mia LaRocca, Shawn Pan, Flora Su, Philip Tran
 
 6a6922ff-d8fd-4add-9929-a6d1082ef162  One Step Closer  145
 Sabina Chen, Diane Zhou
