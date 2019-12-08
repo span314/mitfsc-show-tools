@@ -312,7 +312,7 @@ def output_blurbs(schedule):
                 f.write(participants)
                 f.write("\n")
             if start.blurb:
-                f.write(start.blurb)
+                f.write(strip_nonprintable(start.blurb))
             else:
                 f.write("MISSING BLURB\n\n\n\n\n\n")
             f.write("\n\n")
