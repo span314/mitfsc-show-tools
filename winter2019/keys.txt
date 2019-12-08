@@ -7,4 +7,4 @@ cdef5e8e-62a0-41a5-873b-a503323b7055 Dutch Waltz Louise Ilani Philip Alexandra
 6c1bc2c4-7bba-42b5-a03b-43f75821450d Diane Brancazio Diane
 c182da7e-4721-4218-a6f9-4f762bcc25c2 Swing Dance Diane Flora Shawn Philip Mia Juliana Destinee
 dc98579a-5ad7-4882-bf80-bea9035964fa The Promise Flora
-e221a83f-2ee8-419c-af2f-6347ab544e82 Opening Number Phil Diane Mia Destinee Lili Flora Ilani Lydia Diane Sarah Shawn Bonny Alexandra Louise Liza Philip
+e221a83f-2ee8-419c-af2f-6347ab544e82 Opening Number Phil Destinee Ilani Flora Diane Lydia Sarah Shawn Lili Bonny Diane Alexandra Louise Mia Liza Philip
