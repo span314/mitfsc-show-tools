@@ -8,6 +8,7 @@ import os
 import string
 import shutil
 import subprocess
+import tempfile
 
 # Generate program and skate order from signup spreadsheet
 # Also assumes you have ffmpeg and pdflatex installed
@@ -58,6 +59,9 @@ class Start(object):
 
     def __str__(self):
         return "Start: {}".format(self.key)
+
+    def processed_music_filename(self):
+        return "{}_{}.mp3".format(self.key, build_key(self.name))
 
 
 # Schedule state
@@ -117,8 +121,8 @@ def download_music(schedule):
         os.mkdir(schedule.music_directory)
     s3 = boto3.client("s3")
     for start in schedule.starts.values():
-        download_path = os.path.join(schedule.music_directory, start.key + "__" + start.music_filename)
-        music_path = os.path.join(schedule.music_directory, start.key + "_" + build_key(start.title) + ".mp3")
+        download_path = os.path.join(tempfile.gettempdir(), start.key)
+        music_path = os.path.join(schedule.music_directory, start.processed_music_filename())
         if os.path.exists(music_path):
             print "Found cached music for " + start.key
         elif not start.music_filename:
@@ -346,10 +350,10 @@ def prepare_music_for_disk(schedule):
         os.mkdir(ordered_music_directory)
     track = 0
     for start in schedule.sorted_starts():
-        music_path = os.path.join(schedule.music_directory, start.music_filename + ".mp3")
+        music_path = os.path.join(schedule.music_directory, start.processed_music_filename())
         if os.path.exists(music_path):
             track += 1
-            new_filename = "{:02d}_{}.mp3".format(track, start.key)
+            new_filename = "{:02d}_{}_{}.mp3".format(track, start.key, build_key(start.title))
             new_music_path = os.path.join(ordered_music_directory, new_filename)
             shutil.copy(music_path, new_music_path)
             mp3_file = eyed3.load(new_music_path)
@@ -370,5 +374,5 @@ output_summary(show_schedule)
 output_schedule(show_schedule)
 output_blurbs(show_schedule)
 output_program(show_schedule)
-# prepare_music_for_disk(show_schedule)
+prepare_music_for_disk(show_schedule)
 
