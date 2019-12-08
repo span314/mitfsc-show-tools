@@ -327,6 +327,13 @@ def output_program(schedule):
                     if start.category == "intermission":
                         pout.write("\\vfill\\null\n")
                         pout.write("\\columnbreak\n")
+            elif program_row == "%!!!SHOWDATE\n":
+                pout.write(schedule.start_time.strftime("%B %-d, %Y"))
+            elif program_row == "%!!!SHOWTITLE\n":
+                if schedule.start_time.month == 12:
+                    pout.write("Winter Exhibition")
+                else:
+                    pout.write("Spring Exhibition")
             else:
                 pout.write(program_row)
                 pout.write("\n")
