@@ -7,3 +7,4 @@
 *.pyc
 **/inputs/*
 **/program.tex
+.DS_Store

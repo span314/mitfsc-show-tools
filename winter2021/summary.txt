@@ -1,0 +1,42 @@
+Restart    116
+Allan Gelman, Andy Huang, Caroline Chea, Diane Zhou, Emma Liu, Flora Su, Frankie Schulte, Ilani Axelrod-Freed, Katherine Cheng, Kylie Ying, Maggie Zheng, Shawn Pan, Sunshine Jiang, Susan Scott
+
+JulianaDrozd    170
+Juliana Drozd
+
+JodiBeggs    129
+Jodi Beggs
+
+JessieLiu    150
+Jessie Liu
+
+WinterWarmth    80
+Diane Zhou, Flora Su, Juliana Drozd, Kylie Ying
+
+AndyHuang    99
+Andy Huang
+
+DianeBrancazio    110
+Diane Brancazio
+
+FloraSu    169
+Flora Su
+
+Fourteenstep    90
+Andy Huang, Emma Liu, Flora Su, Ilani Axelrod-Freed, Juliana Drozd, Kylie Ying, Shawn Pan
+
+ErinaYamaguchi    185
+Erina Yamaguchi
+
+ByeByeYesterday    152
+Diane Zhou, Sabina Chen
+
+LanaVanNote    141
+Lana Van Note
+
+JulianaDrozdErinaYamaguchiAndyHuang    120
+Andy Huang, Erina Yamaguchi, Juliana Drozd
+
+KylieYing    150
+Kylie Ying
+
