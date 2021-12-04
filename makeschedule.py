@@ -141,7 +141,7 @@ def output_schedule(schedule):
             f.write("         ")
             f.write(join_names(start.participants))
             f.write("\n")
-            if start.category == "intermission":
+            if len(start.participants) == 0:
                 transition = 0
             elif 0 < len(start.participants) < 5:
                 transition = max(40, 15 + len(start.blurb) // 10)
@@ -201,12 +201,14 @@ def output_program(schedule):
                 for start in schedule.sorted_starts():
                     print(start.name)
                     participants = []
-                    if start.has_title:
-                        participants.append(join_names(start.participants, should_sort=(len(start.participants) > 2)) + " ")
-                    pout.write("\\programnumber{" + start.name + "}{" + "\\\\".join(participants) + "}\n")
-                    if start.category == "intermission":
+                    if len(start.participants) == 0:
                         pout.write("\\vfill\\null\n")
                         pout.write("\\columnbreak\n")
+                    if start.title:
+                        participants.append(join_names(start.participants, should_sort=(len(start.participants) > 2)) + " ")
+                        pout.write("\\programnumber{" + start.title + "}{" + "\\\\".join(participants) + "}\n")
+                    else:
+                        pout.write("\\programnumber{" + start.participants[0].name + "}{" + "\\\\".join(participants) + "}\n")
             elif program_row == "%!!!SHOWDATE\n":
                 pout.write(schedule.start_time.strftime("%B %-d, %Y"))
             elif program_row == "%!!!SHOWTITLE\n":
@@ -217,7 +219,7 @@ def output_program(schedule):
             else:
                 pout.write(program_row)
                 pout.write("\n")
-    subprocess.call(["pdflatex", "-halt-on-error", "-output-directory", schedule.directory, "program.tex"])
+    subprocess.call(["/Library/TeX/texbin/pdflatex", "-halt-on-error", "-output-directory", schedule.directory, "program.tex"])
 
 
 ################
@@ -225,7 +227,7 @@ def output_program(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("winter2021", datetime.datetime(2021, 12, 5, 18, 5))
+    show_schedule = Schedule("winter2021", datetime.datetime(2021, 12, 5, 18, 8))
     parse_starts_csv(show_schedule)
     output_keys(show_schedule)
     output_summary(show_schedule)
