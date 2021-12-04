@@ -1,5 +1,5 @@
 Restart    116
-Allan Gelman, Andy Huang, Caroline Chea, Diane Zhou, Emma Liu, Flora Su, Frankie Schulte, Ilani Axelrod-Freed, Katherine Cheng, Kylie Ying, Maggie Zheng, Shawn Pan, Sunshine Jiang, Susan Scott
+Allan Gelman, Andy Huang, Caroline Chea, Danny Gelman, Diane Zhou, Emma Liu, Flora Su, Frankie Schulte, Ilani Axelrod-Freed, Katherine Cheng, Kylie Ying, Maggie Zheng, Shawn Pan, Sunshine Jiang, Susan Scott, Yiming Chen
 
 JulianaDrozd    170
 Juliana Drozd
@@ -22,8 +22,11 @@ Diane Brancazio
 FloraSu    169
 Flora Su
 
-Fourteenstep    90
-Andy Huang, Emma Liu, Flora Su, Ilani Axelrod-Freed, Juliana Drozd, Kylie Ying, Shawn Pan
+minuteWarmup    300
+
+
+Fourteenstep    70
+Amy Mossman, Andy Huang, Flora Su, Ilani Axelrod-Freed, Juliana Drozd, Kylie Ying, Nidhi Juthani, Shawn Pan
 
 ErinaYamaguchi    185
 Erina Yamaguchi
@@ -33,9 +36,6 @@ Diane Zhou, Sabina Chen
 
 LanaVanNote    141
 Lana Van Note
-
-JulianaDrozdErinaYamaguchiAndyHuang    120
-Andy Huang, Erina Yamaguchi, Juliana Drozd
 
 KylieYing    150
 Kylie Ying
