@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import csv
+import uuid
 from collections import defaultdict
 import datetime
 import os
@@ -16,8 +17,6 @@ class Skater(object):
     def __init__(self):
         self.key = ""
         self.name = ""
-        self.email = ""
-        self.order = 0
 
     def __repr__(self):
         return str(self)
@@ -39,6 +38,7 @@ class Start(object):
         self.length_seconds = 0
         self.blurb = ""
         self.name = ""
+        self.choreographers = ""
         self.participants = list()
         self.category = None
         self.has_title = False
@@ -81,39 +81,34 @@ def strip_nonprintable(s):
 
 
 def parse_starts_csv(schedule):
-    print("Parsing Skaters")
-    skaters_path = os.path.join(schedule.input_directory, "skaters.csv")
-    with open(skaters_path) as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            skater_key = build_key(row["name"])
-            skater = schedule.skaters[skater_key]
-            skater.key = skater_key
-            skater.name = row["name"].strip()
-            skater.email = row["email"]
     print("Parsing Starts")
     starts_path = os.path.join(schedule.input_directory, "starts.csv")
     with open(starts_path) as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row["title"]:
-                start_key = build_key(row["title"])
+            if not row["Skaters"]:
+                start_key = str(uuid.uuid4())
+            elif row["Title"]:
+                start_key = build_key(row["Title"])
             else:
-                start_key = build_key(row["skaters"])
+                start_key = build_key(row["Skaters"])
             start = schedule.starts[start_key]
             start.key = start_key
-            start.title = row["title"]
-            skater_names = [n.strip() for n in row["skaters"].split(",")]
+            start.title = row["Title"]
+            skater_names = [n.strip() for n in row["Skaters"].split(",")]
             for skater_name in skater_names:
                 if skater_name:
                     skater_key = build_key(skater_name)
-                    participant = schedule.skaters[skater_key]
-                    if not participant.name:
-                        raise ValueError(f"Skater not found {skater_key}")
-                    start.participants.append(participant)
-            time = row["length"].split(":")
+                    skater = schedule.skaters[skater_key]
+                    if not skater.name:
+                        # create new skater
+                        skater.key = skater_key
+                        skater.name = skater_name
+                    start.participants.append(skater)
+            time = row["Length"].split(":")
             start.length_seconds = int(time[0]) * 60 + int(time[1])
-            start.blurb = row["blurb"]
+            start.length_seconds = 120
+            start.blurb = row["Blurb"]
     print("Parsed Skaters")
     for skater in schedule.skaters.values():
         print(skater)
@@ -195,20 +190,21 @@ def output_blurbs(schedule):
 
 
 def output_program(schedule):
+    halfway_cnt = len(schedule.starts) // 2
     with open("programtemplate.tex", "r") as pin, open("program.tex", "w") as pout:
         for program_row in pin:
             if program_row == "%!!!PROGRAMCONTENT\n":
-                for start in schedule.sorted_starts():
+                for i, start in enumerate(schedule.sorted_starts()):
                     print(start.name)
                     participants = []
-                    if len(start.participants) == 0:
+                    if i == halfway_cnt:
                         pout.write("\\vfill\\null\n")
                         pout.write("\\columnbreak\n")
                     if start.title:
-                        participants.append(join_names(start.participants, should_sort=(len(start.participants) > 2)) + " ")
+                        participants.append(join_names(start.participants, should_sort=(len(start.participants) > 2)))
                         pout.write("\\programnumber{" + start.title + "}{" + "\\\\".join(participants) + "}\n")
                     else:
-                        pout.write("\\programnumber{" + start.participants[0].name + "}{" + "\\\\".join(participants) + "}\n")
+                        pout.write("\\programnumber{" + start.participants[0].name + "}{" + "\\\\".join(participants) + " }\n")
             elif program_row == "%!!!SHOWDATE\n":
                 pout.write(schedule.start_time.strftime("%B %-d, %Y"))
             elif program_row == "%!!!SHOWTITLE\n":
@@ -227,7 +223,7 @@ def output_program(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("winter2021", datetime.datetime(2021, 12, 5, 18, 8))
+    show_schedule = Schedule("spring2022", datetime.datetime(2022, 3, 12, 13, 35))
     parse_starts_csv(show_schedule)
     output_keys(show_schedule)
     output_summary(show_schedule)
