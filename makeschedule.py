@@ -95,6 +95,7 @@ def parse_starts_csv(schedule):
             start = schedule.starts[start_key]
             start.key = start_key
             start.title = row["Title"]
+            start.choreographers = row["Choreographer(s)"]
             skater_names = [n.strip() for n in row["Skaters"].split(",")]
             for skater_name in skater_names:
                 if skater_name:
@@ -196,15 +197,22 @@ def output_program(schedule):
             if program_row == "%!!!PROGRAMCONTENT\n":
                 for i, start in enumerate(schedule.sorted_starts()):
                     print(start.name)
-                    participants = []
                     if i == halfway_cnt:
                         pout.write("\\vfill\\null\n")
                         pout.write("\\columnbreak\n")
                     if start.title:
-                        participants.append(join_names(start.participants, should_sort=(len(start.participants) > 2)))
-                        pout.write("\\programnumber{" + start.title + "}{" + "\\\\".join(participants) + "}\n")
+                        title = start.title
+                        participants = join_names(start.participants, should_sort=(len(start.participants) > 2))
+                        if not participants:
+                            participants = "~"
                     else:
-                        pout.write("\\programnumber{" + start.participants[0].name + "}{" + "\\\\".join(participants) + " }\n")
+                        title = start.participants[0].name
+                        participants = "~"
+                    if start.choreographers:
+                        choreographers = f"~Choreographed by {start.choreographers}"
+                    else:
+                        choreographers = ""
+                    pout.write("\\programnumber{" + title + "}{" + participants + "}{" + choreographers + "}\n")
             elif program_row == "%!!!SHOWDATE\n":
                 pout.write(schedule.start_time.strftime("%B %-d, %Y"))
             elif program_row == "%!!!SHOWTITLE\n":
