@@ -108,7 +108,6 @@ def parse_starts_csv(schedule):
                     start.participants.append(skater)
             time = row["Length"].split(":")
             start.length_seconds = int(time[0]) * 60 + int(time[1])
-            start.length_seconds = 120
             start.blurb = row["Blurb"]
     print("Parsed Skaters")
     for skater in schedule.skaters.values():

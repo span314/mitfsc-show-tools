@@ -1,57 +1,57 @@
-GrandEscape    120
+GrandEscape    150
 Alex Poret, Allan Gelman, Amy Li, Andy Huang, Danny Gelman, Destinee Hung, Diane Brancazio, Diane Zhou, Edmund Williams, Emma Liu, Erina Yamaguchi, Esther Horwich, Frankie Schulte, Hong Xiang, Ilani Axelrod-Freed, Penny Tan, Phil Michael, Sabina Chen, Sue Lee, Sunshine Jiang, Susan Scott
 
-NidhiJuthani    120
+NidhiJuthani    127
 Nidhi Juthani
 
-Itassomebodyelse    120
+Itassomebodyelse    110
 Ita Futran
 
-LindsayBolino    120
+LindsayBolino    150
 Lindsay Bolino
 
-Boys    120
+Boys    142
 Erina Yamaguchi, Juliana Drozd
 
-b20da42f-99c1-43bf-b815-5d1f2b594ae6    120
+e7b4a29d-8bf3-441a-9ab1-01d8ad0dd1e9    360
 
 
-TheSpidermanFoxtrot    120
+TheSpidermanFoxtrot    76
 Andy Huang, Emma Liu, Ilani Axelrod-Freed, Juliana Drozd, Juliana Stachurksa, Katherine Cheng, Nicholas Liu, Nidhi Juthani
 
-Shivers    120
+Shivers    131
 Diane Brancazio, Edmund Williams
 
-LoveOnTheBrain    120
+LoveOnTheBrain    191
 Lili Sun
 
-LanaVanNote    120
+LanaVanNote    130
 Lana Van Note
 
-CanastaTango    120
+CanastaTango    60
 Alexandra Poret, Amy Li, Andy Huang, Destinee Hung, Esther Horwich, Grace Smith, Ilani Axelrod-Freed, Katherine Cheng, Lily Liu, Nicholas Liu, Phil Michael, Sue Lee
 
-IHearaSymphony    120
+IHearaSymphony    187
 Erina Yamaguchi
 
-059469ee-bc92-45e1-ab88-55561c86ff62    120
+f7f92da6-a80d-40d6-8f56-32a570b422e6    360
 
 
 TorontoTenStep    120
 Alexandra Poret, Amy Mossman, Destinee Hung, Emma Liu, Esther Horwich, Ilani Axelrod-Freed, Katherine Cheng, Susan Scott
 
-FreeskatePalladio    120
+FreeskatePalladio    145
 Ita Futran
 
-AndyHuang    120
+AndyHuang    122
 Andy Huang
 
-CynthiaCao    120
+CynthiaCao    148
 Cynthia Cao
 
-HelloMuddahHelloFaddah    120
+HelloMuddahHelloFaddah    165
 Ilani Axelrod-Freed, Phil Michael, Sue Lee
 
-Boyfriend    120
+Boyfriend    153
 Juliana Drozd
 
