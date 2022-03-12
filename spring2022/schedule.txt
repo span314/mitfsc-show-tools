@@ -11,7 +11,7 @@
 01:50:19 
          
 01:56:19 
-         Andy Huang, Emma Liu, Ilani Axelrod-Freed, Juliana Drozd, Juliana Stachurksa, Katherine Cheng, Nicholas Liu, Nidhi Juthani
+         Andy Huang, Emma Liu, Ilani Axelrod-Freed, Juliana Drozd, Juliana Stachurska, Katherine Cheng, Nicholas Liu, Nidhi Juthani
 01:58:55 
          Diane Brancazio, Edmund Williams
 02:01:46 
@@ -34,5 +34,5 @@
          Cynthia Cao
 02:32:49 
          Ilani Axelrod-Freed, Phil Michael, Sue Lee
-02:36:34 
+02:36:42 
          Juliana Drozd

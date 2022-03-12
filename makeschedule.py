@@ -117,12 +117,12 @@ def parse_starts_csv(schedule):
         print(start.key, start.title, start.participants)
 
 
-def join_names(skaters, skater_sep=", ", should_sort=True):
-    if should_sort:
-        processed_skaters = sorted(skaters, key=lambda s: s.name)
+def join_names(skaters, nbsp_char=None):
+    processed_skaters = sorted(skaters, key=lambda s: s.name)
+    if nbsp_char:
+        return ", ".join([s.name.replace(" ", nbsp_char) for s in processed_skaters])
     else:
-        processed_skaters = skaters
-    return skater_sep.join([s.name for s in processed_skaters])
+        return ", ".join([s.name for s in processed_skaters])
 
 
 def output_schedule(schedule):
@@ -201,14 +201,14 @@ def output_program(schedule):
                         pout.write("\\columnbreak\n")
                     if start.title:
                         title = start.title
-                        participants = join_names(start.participants, should_sort=(len(start.participants) > 2))
+                        participants = join_names(start.participants, "~")
                         if not participants:
                             participants = "~"
                     else:
                         title = start.participants[0].name
                         participants = "~"
                     if start.choreographers:
-                        choreographers = f"~Choreographed by {start.choreographers}"
+                        choreographers = f"\\\\Choreographed by {start.choreographers}"
                     else:
                         choreographers = ""
                     pout.write("\\programnumber{" + title + "}{" + participants + "}{" + choreographers + "}\n")
