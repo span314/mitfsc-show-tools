@@ -13,7 +13,7 @@ Lindsay Bolino
 Boys    142
 Erina Yamaguchi, Juliana Drozd
 
-a5516aa7-9c9c-4cb8-8048-19a20710ed8f    360
+29ba6612-2b59-4f12-aa0c-5f7f8bd8c217    360
 
 
 TheSpidermanFoxtrot    76
@@ -34,7 +34,7 @@ Alexandra Poret, Amy Li, Andy Huang, Destinee Hung, Esther Horwich, Grace Smith,
 IHearaSymphony    187
 Erina Yamaguchi
 
-c28a8fb5-bb84-473b-a232-e52789d7a26f    360
+c969d8c7-aec1-416c-b8c1-31a9e5eb89c0    360
 
 
 TorontoTenStep    120
@@ -49,7 +49,7 @@ Andy Huang
 CynthiaCao    148
 Cynthia Cao
 
-HelloMuddahHelloFaddah    165
+SummerCamp    165
 Ilani Axelrod-Freed, Phil Michael, Sue Lee
 
 Boyfriend    153
