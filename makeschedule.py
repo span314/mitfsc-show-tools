@@ -85,9 +85,9 @@ def parse_starts_csv(schedule):
     starts_path = os.path.join(schedule.input_directory, "starts.csv")
     with open(starts_path) as f:
         reader = csv.DictReader(f)
-        for row in reader:
+        for i, row in enumerate(reader):
             if not row["Skaters"]:
-                start_key = str(uuid.uuid4())
+                start_key = f"Warmup{i}"
             elif row["Title"]:
                 start_key = build_key(row["Title"])
             else:
