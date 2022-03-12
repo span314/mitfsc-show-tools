@@ -13,11 +13,11 @@ Lindsay Bolino
 Boys    142
 Erina Yamaguchi, Juliana Drozd
 
-29ba6612-2b59-4f12-aa0c-5f7f8bd8c217    360
+1ccea6c5-7781-44a4-82eb-479211ba00d9    360
 
 
 TheSpidermanFoxtrot    76
-Andy Huang, Emma Liu, Ilani Axelrod-Freed, Juliana Drozd, Juliana Stachurska, Katherine Cheng, Nicholas Liu, Nidhi Juthani
+Andy Huang, Emma Liu, Ilani Axelrod-Freed, Juliana Drozd, Juliana Stachurska, Katherine Cheng, Nidhi Juthani
 
 Shivers    131
 Diane Brancazio, Edmund Williams
@@ -29,12 +29,12 @@ LanaVanNote    130
 Lana Van Note
 
 CanastaTango    60
-Alexandra Poret, Amy Li, Andy Huang, Destinee Hung, Esther Horwich, Grace Smith, Ilani Axelrod-Freed, Katherine Cheng, Lily Liu, Nicholas Liu, Phil Michael, Sue Lee
+Alexandra Poret, Amy Li, Andy Huang, Destinee Hung, Esther Horwich, Grace Smith, Ilani Axelrod-Freed, Katherine Cheng, Phil Michael, Sue Lee
 
 IHearaSymphony    187
 Erina Yamaguchi
 
-c969d8c7-aec1-416c-b8c1-31a9e5eb89c0    360
+ca4b0f4d-4ccb-4695-b933-7b185dc74476    360
 
 
 TorontoTenStep    120
