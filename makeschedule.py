@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import csv
-import uuid
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 import datetime
 import os
 import string
@@ -37,11 +36,9 @@ class Start(object):
         self.music_url = ""
         self.length_seconds = 0
         self.blurb = ""
-        self.name = ""
+        self.title = ""
         self.choreographers = ""
         self.participants = list()
-        self.category = None
-        self.has_title = False
 
     def __repr__(self):
         return str(self)
@@ -50,7 +47,7 @@ class Start(object):
         return "Start: {}".format(self.key)
 
     def processed_music_filename(self):
-        return "{}_{}.mp3".format(self.key, build_key(self.name))
+        return "{}_{}.mp3".format(self.key, build_key(self.title))
 
 
 # Schedule state
@@ -86,16 +83,10 @@ def parse_starts_csv(schedule):
     with open(starts_path) as f:
         reader = csv.DictReader(f)
         for i, row in enumerate(reader):
-            if not row["Skaters"]:
-                start_key = f"Warmup{i}"
-            elif row["Title"]:
-                start_key = build_key(row["Title"])
-            else:
-                start_key = build_key(row["Skaters"])
+            start_key = row["Id"].strip()
             start = schedule.starts[start_key]
             start.key = start_key
             start.title = row["Title"]
-            start.choreographers = row["Choreographer(s)"]
             skater_names = [n.strip() for n in row["Skaters"].split(",")]
             for skater_name in skater_names:
                 if skater_name:
@@ -106,8 +97,10 @@ def parse_starts_csv(schedule):
                         skater.key = skater_key
                         skater.name = skater_name
                     start.participants.append(skater)
-            time = row["Length"].split(":")
-            start.length_seconds = int(time[0]) * 60 + int(time[1])
+            length = row["Length"]
+            if length:
+                time = length.split(":")
+                start.length_seconds = int(time[0]) * 60 + int(time[1])
             start.blurb = row["Blurb"]
     print("Parsed Skaters")
     for skater in schedule.skaters.values():
@@ -131,10 +124,10 @@ def output_schedule(schedule):
     with open(schedule_out, "w") as f:
         for start in schedule.sorted_starts():
             f.write(start_time.strftime("%I:%M:%S "))
-            f.write(start.name)
-            f.write("\n")
-            f.write("         ")
-            f.write(join_names(start.participants))
+            f.write(start.title)
+            if len(start.participants) == 1:
+                f.write(" - ")
+                f.write(start.participants[0].name)
             f.write("\n")
             if len(start.participants) == 0:
                 transition = 0
@@ -145,26 +138,13 @@ def output_schedule(schedule):
             start_time += datetime.timedelta(seconds=start.length_seconds + transition)
 
 
-def output_keys(schedule):
-    keys_out = os.path.join(schedule.directory, "keys.txt")
-    with open(keys_out, "w") as f:
-        for start in schedule.sorted_starts():
-            print(start)
-            f.write(start.key)
-            f.write(" ")
-            f.write(start.title)
-            f.write(" ")
-            f.write(" ".join([skater.name for skater in start.participants]))
-            f.write("\n")
-
-
 def output_summary(schedule):
     summary_out = os.path.join(schedule.directory, "summary.txt")
     with open(summary_out, "w") as f:
         for start in schedule.sorted_starts():
             f.write(start.key)
             f.write("  ")
-            f.write(start.name)
+            f.write(start.title)
             f.write("  ")
             f.write(str(start.length_seconds))
             f.write("\n")
@@ -176,15 +156,15 @@ def output_blurbs(schedule):
     blurbs_out = os.path.join(schedule.directory, "blurbs.txt")
     with open(blurbs_out, "w") as f:
         for start in schedule.sorted_starts():
-            f.write(start.name)
+            f.write(start.title)
             f.write("\n")
             participants = join_names(start.participants)
-            if participants != start.name:
+            if participants != start.title:
                 f.write(participants)
                 f.write("\n")
             if start.blurb:
                 f.write(strip_nonprintable(start.blurb))
-            else:
+            elif len(start.participants) > 0:
                 f.write("MISSING BLURB\n\n\n\n\n\n")
             f.write("\n\n")
 
@@ -195,7 +175,6 @@ def output_program(schedule):
         for program_row in pin:
             if program_row == "%!!!PROGRAMCONTENT\n":
                 for i, start in enumerate(schedule.sorted_starts()):
-                    print(start.name)
                     if i == halfway_cnt:
                         pout.write("\\vfill\\null\n")
                         pout.write("\\columnbreak\n")
@@ -225,14 +204,61 @@ def output_program(schedule):
     subprocess.call(["/Library/TeX/texbin/pdflatex", "-halt-on-error", "-output-directory", schedule.directory, "program.tex"])
 
 
+def combine_responses(schedule):
+    # locate responses file
+    for filename in os.listdir(schedule.input_directory):
+        if "Responses" in filename:
+            break
+    else:
+        raise ValueError("Response file not found")
+    print(f"Processing responses file: {filename}")
+    responses_file_path = os.path.join(schedule.input_directory, filename)
+    starts_file_path = os.path.join(schedule.input_directory, "starts.csv")
+    start_rows = OrderedDict()
+    fieldnames = ["Id", "Title", "Skaters", "Blurb", "Music", "Length", "Comments"]
+    # read existing starts file
+    if os.path.exists(starts_file_path):
+        with open(starts_file_path, "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                start_id = row["Id"].strip()
+                if row["Comments"] != "SCRATCH":
+                    start_rows[start_id] = row
+    # read responses
+    with open(responses_file_path, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            start_id = row["Id"].strip()
+            if start_id in start_rows:
+                if row["Comments"] == "SCRATCH":
+                    # delete
+                    start_rows.pop(start_id)
+                else:
+                    # update
+                    existing_row = start_rows[start_id]
+                    for field, value in row.items():
+                        if value:
+                            existing_row[field] = value
+            else:
+                if row["Comments"] != "SCRATCH":
+                    # new row
+                    start_rows[start_id] = row
+    # output starts file
+    with open(starts_file_path, "w") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, restval="", extrasaction="ignore")
+        writer.writeheader()
+        for start_id, start_row in start_rows.items():
+            writer.writerow(start_row)
+
+
 ################
 ### WORKFLOW ###
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("spring2022", datetime.datetime(2022, 3, 12, 13, 35))
+    show_schedule = Schedule("winter2022", datetime.datetime(2022, 12, 4, 13, 5))
+    combine_responses(show_schedule)
     parse_starts_csv(show_schedule)
-    output_keys(show_schedule)
     output_summary(show_schedule)
     output_schedule(show_schedule)
     output_blurbs(show_schedule)
