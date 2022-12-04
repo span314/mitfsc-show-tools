@@ -87,6 +87,7 @@ def parse_starts_csv(schedule):
             start = schedule.starts[start_key]
             start.key = start_key
             start.title = row["Title"]
+            start.choreographers = row["Choreographers"]
             skater_names = [n.strip() for n in row["Skaters"].split(",")]
             for skater_name in skater_names:
                 if skater_name:
@@ -215,7 +216,7 @@ def combine_responses(schedule):
     responses_file_path = os.path.join(schedule.input_directory, filename)
     starts_file_path = os.path.join(schedule.input_directory, "starts.csv")
     start_rows = OrderedDict()
-    fieldnames = ["Id", "Title", "Skaters", "Blurb", "Music", "Length", "Comments"]
+    fieldnames = ["Id", "Title", "Skaters", "Blurb", "Music", "Length", "Choreographers", "Comments"]
     # read existing starts file
     if os.path.exists(starts_file_path):
         with open(starts_file_path, "r") as f:
