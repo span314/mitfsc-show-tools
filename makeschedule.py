@@ -39,6 +39,7 @@ class Start(object):
         self.title = ""
         self.choreographers = ""
         self.participants = list()
+        self.participants_needs_sort = True
 
     def __repr__(self):
         return str(self)
@@ -88,6 +89,8 @@ def parse_starts_csv(schedule):
             start.key = start_key
             start.title = row["Title"]
             start.choreographers = row["Choreographers"]
+            if row["NamesOrdered"]:
+                start.participants_needs_sort = False
             skater_names = [n.strip() for n in row["Skaters"].split(",")]
             for skater_name in skater_names:
                 if skater_name:
@@ -111,8 +114,11 @@ def parse_starts_csv(schedule):
         print(start.key, start.title, start.participants)
 
 
-def join_names(skaters, nbsp_char=None):
-    processed_skaters = sorted(skaters, key=lambda s: s.name)
+def join_names(skaters, nbsp_char=None, needs_sort=True):
+    if needs_sort:
+        processed_skaters = sorted(skaters, key=lambda s: s.name)
+    else:
+        processed_skaters = skaters
     if nbsp_char:
         return ", ".join([s.name.replace(" ", nbsp_char) for s in processed_skaters])
     else:
@@ -181,7 +187,7 @@ def output_program(schedule):
                         pout.write("\\columnbreak\n")
                     if start.title:
                         title = start.title
-                        participants = join_names(start.participants, "~")
+                        participants = join_names(start.participants, nbsp_char="~", needs_sort=start.participants_needs_sort)
                         if not participants:
                             participants = "~"
                     else:
@@ -216,7 +222,7 @@ def combine_responses(schedule):
     responses_file_path = os.path.join(schedule.input_directory, filename)
     starts_file_path = os.path.join(schedule.input_directory, "starts.csv")
     start_rows = OrderedDict()
-    fieldnames = ["Id", "Title", "Skaters", "Blurb", "Music", "Length", "Choreographers", "Comments"]
+    fieldnames = ["Id", "Title", "Skaters", "Blurb", "Music", "Length", "Choreographers", "Comments", "NamesOrdered"]
     # read existing starts file
     if os.path.exists(starts_file_path):
         with open(starts_file_path, "r") as f:
@@ -257,7 +263,7 @@ def combine_responses(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("winter2022", datetime.datetime(2022, 12, 4, 13, 5))
+    show_schedule = Schedule("spring2023", datetime.datetime(2023, 3, 19, 15, 5))
     combine_responses(show_schedule)
     parse_starts_csv(show_schedule)
     output_summary(show_schedule)
