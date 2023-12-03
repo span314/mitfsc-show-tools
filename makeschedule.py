@@ -235,7 +235,8 @@ def combine_responses(schedule):
     with open(responses_file_path, "r") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            start_id = row["Id"].strip()
+            start_id = build_key(row["Title"])  # todo fix previous title
+            row["Id"] = start_id
             if start_id in start_rows:
                 if row["Comments"] == "SCRATCH":
                     # delete
@@ -263,7 +264,7 @@ def combine_responses(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("spring2023", datetime.datetime(2023, 3, 19, 15, 5))
+    show_schedule = Schedule("winter2023", datetime.datetime(2023, 12, 3, 14, 35))
     combine_responses(show_schedule)
     parse_starts_csv(show_schedule)
     output_summary(show_schedule)
