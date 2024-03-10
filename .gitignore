@@ -6,5 +6,6 @@
 *.key
 *.pyc
 **/inputs/*
+**/music/*
 **/program.tex
 .DS_Store
