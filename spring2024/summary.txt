@@ -1,5 +1,8 @@
-Groupnumber  Group number  174
-TBD
+Groupnumber  We Go Together  174
+Amy Mossman, Anji Zhang, Christine Imogu, Elena Popkova, Frances Keer, Grace Chen, Howard Beck, Julie Chen, Kate Oteng-Bediako, Kennedy Gore, Sofia Chufani de la Cuadra, Tzu-An Sheng
+
+AManWithoutLove  A Man Without Love  161
+Lindsay Bolino
 
 SupermarketFlowers  Supermarket Flowers  152
 Andy Huang
@@ -7,7 +10,7 @@ Andy Huang
 DontRainonmyParade  Don't Rain on my Parade  100
 Justine Shih
 
-GhostofaRose  Ghost of a Rose  100
+GhostofaRose  Ghost of a Rose (Golden Starlight Waltz)  100
 Flora Su, Shawn Pan
 
 Burlesque  Burlesque  128
@@ -16,7 +19,10 @@ Amanda Paredes Rioboo
 DontLoseUrHead  Don’t Lose Ur Head  100
 Cassie Parent
 
-Warmup1  Warmup (6 minutes)  360
+CellBlockTango  Cell Block Tango  360
+Eleanor Li, Ita Furan, Lana Van Note, Lili Sun, Lindsay Bolino, Mandy Paredes
+
+Warmup1  Warmup (7 minutes)  420
 
 
 DutchWaltz  Dutch Waltz  90
@@ -25,8 +31,14 @@ Alexandra Poret, Andy Huang, Esther Horwich, Flora Su, Kylie Leung, Michaela Oli
 MaybeThisTime  Maybe This Time  156
 Maddie Paoletti
 
+LsCanasta  2 Ls Canasta  105
+Lana Van Note, Lili Sun
+
 Halo  Halo  113
 Eleanor Li
+
+OneDay  One Day  81
+Diane Brancazio
 
 WestSideStoryMedley  West Side Story Medley  122
 Bridget Denzer
@@ -37,14 +49,26 @@ Juliana Stachurska
 RomanticFlight  Romantic Flight  117
 Karen Li
 
-Memory  Memory  0
+Memory  Memory  126
 Flora Su
 
-Warmup2  Warmup (6 minutes)  360
+JingleBellRock  Jingle Bell Rock  113
+Ita Futran, Lana Van Note, Lindsay Bolino, Mandy Paredes
 
+Warmup2  Warmup (7 minutes)  420
+
+
+SomewhereinTime  Somewhere in Time  217
+Lili Sun
 
 Ophelia  Ophelia  160
 Claire Aibel
+
+AllThatJazz  All That Jazz  221
+Lana Van Note
+
+BackstageRomance  Backstage Romance  323
+Ita Futran
 
 Snakes  Snakes  101
 Alexandra Poret
@@ -60,7 +84,4 @@ Alexandra Poret, Amy Li, Andy Huang, Esther Horwich, Evelyne Ringoot, Flora Su, 
 
 NightonBaldMountain  Night on Bald Mountain  1
 Elena Popkova, Frances Keer, Julie Chen, Kennedy Gore, Tzu-An Sheng
-
-TBDgradstudentmusicalnumber  TBD - grad student musical number  0
-Alexandra Poret, Cassie Parent, et al. (will have skaters added)
 

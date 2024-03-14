@@ -169,7 +169,7 @@ def output_blurbs(schedule):
             if participants != start.title:
                 f.write(participants)
                 f.write("\n")
-            if start.blurb:
+            if start.blurb and start.blurb != "TBD":
                 f.write(strip_nonprintable(start.blurb))
             elif len(start.participants) > 0:
                 f.write("MISSING BLURB\n\n\n\n\n\n")
@@ -235,7 +235,10 @@ def combine_responses(schedule):
     with open(responses_file_path, "r") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            start_id = build_key(row["Title"])  # todo fix previous title
+            if row["PreviousTitle"]:
+                start_id = build_key(row["PreviousTitle"])
+            else:
+                start_id = build_key(row["Title"])
             row["Id"] = start_id
             if start_id in start_rows:
                 if row["Comments"] == "SCRATCH":
@@ -264,7 +267,7 @@ def combine_responses(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("spring2024", datetime.datetime(2024, 3, 17, 14, 15))
+    show_schedule = Schedule("spring2024", datetime.datetime(2024, 3, 17, 14, 5))
     combine_responses(show_schedule)
     parse_starts_csv(show_schedule)
     output_summary(show_schedule)
