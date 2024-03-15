@@ -176,7 +176,8 @@ def output_blurbs(schedule):
             f.write("\n\n")
 
 
-def output_program(schedule):
+# deprecated in favor of html
+def output_program_latex(schedule):
     halfway_cnt = len(schedule.starts) // 2
     with open("programtemplate.tex", "r") as pin, open("program.tex", "w") as pout:
         for program_row in pin:
@@ -209,6 +210,41 @@ def output_program(schedule):
                 pout.write(program_row)
                 pout.write("\n")
     subprocess.call(["/Library/TeX/texbin/pdflatex", "-halt-on-error", "-output-directory", schedule.directory, "program.tex"])
+
+
+# TODO investigate html templating libraries? load from javascript?
+def output_program(schedule):
+    halfway_cnt = len(schedule.starts) // 2
+    with open("templates/program/template.html", "r") as pin, open(f"{schedule.directory}/program.html", "w") as pout:
+        for program_row in pin:
+            program_row_no_whitespace = program_row.strip()
+            if program_row_no_whitespace == "<!-- Title -->":
+                pout.write("<div>TEST Content</div>\n")
+                # for i, start in enumerate(schedule.sorted_starts()):
+                #     if i == halfway_cnt:
+                #         pout.write("\\vfill\\null\n")
+                #         pout.write("\\columnbreak\n")
+                #     if start.title:
+                #         title = start.title
+                #         participants = join_names(start.participants, nbsp_char="~", needs_sort=start.participants_needs_sort)
+                #         if not participants:
+                #             participants = "~"
+                #     else:
+                #         title = start.participants[0].name
+                #         participants = "~"
+                #     if start.choreographers:
+                #         choreographers = f"\\\\Choreographed by {start.choreographers}"
+                #     else:
+                #         choreographers = ""
+                #     pout.write("\\programnumber{" + title + "}{" + participants + "}{" + choreographers + "}\n")
+            elif program_row_no_whitespace == "<!-- Starts -->":
+                if schedule.start_time.month == 12:
+                    pout.write("<div>Winter Exhibition</div>\n")
+                else:
+                    pout.write("<div>Spring Exhibition</div>\n")
+            else:
+                pout.write(program_row)
+                pout.write("\n")
 
 
 def combine_responses(schedule):
@@ -273,4 +309,4 @@ if __name__ == "__main__":
     output_summary(show_schedule)
     output_schedule(show_schedule)
     output_blurbs(show_schedule)
-    # output_program(show_schedule)
+    output_program(show_schedule)
