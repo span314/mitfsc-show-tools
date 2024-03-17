@@ -26,9 +26,12 @@ Warmup1  Warmup (7 minutes)  420
 
 
 DutchWaltz  Dutch Waltz  103
-Alexandra Poret, Amy Li, Andy Huang, Fan Xue, Flora Su, Kylie Leung, Michaela Olimene, Shawn Pan, Simona Rosu
+Alexandra Poret, Amy Li, Andy Huang, Fan Xue, Flora Su, Kylie Leung, Michaela Olimene, Phil Michael, Shawn Pan, Simona Rosu, Sue Lee, Tommy Tai
 
-MaybeThisTime  Maybe This Time  156
+OneDay  One Day  81
+Diane Brancazio
+
+MaybeThisTime  Maybe This Time  189
 Maddie Paoletti
 
 LsCanasta  2 Ls Canasta  105
@@ -37,13 +40,10 @@ Lana Van Note, Lili Sun
 Halo  Halo  138
 Eleanor Li
 
-OneDay  One Day  81
-Diane Brancazio
-
 WestSideStoryMedley  West Side Story Medley  122
 Bridget Denzer
 
-PaintItBlack  Paint It, Black  120
+PaintItBlack  Paint It, Black!  129
 Juliana Stachurska
 
 RomanticFlight  Romantic Flight  117
@@ -61,8 +61,8 @@ Warmup2  Warmup (7 minutes)  420
 SomewhereinTime  Somewhere in Time  217
 Lili Sun
 
-Ophelia  Ophelia  160
-Claire Aibel
+WayDownHadestown  Way Down Hadestown  126
+Alexandra Poret, Cassie Parent, Eleanor Li, Evelyne Ringoot, Juliana Stachurska
 
 AllThatJazz  All That Jazz  221
 Lana Van Note
@@ -79,9 +79,9 @@ Evelyne Ringoot
 ElTangodeRoxanne  El Tango de Roxanne  184
 Sabrina Meng
 
-CalypsoChaCha  Calypso Cha-Cha  150
-Alexandra Poret, Amy Li, Andy Huang, Cynthia Cao, Esther Horwich, Evelyne Ringoot, Flora Su, Linda Warner, Michaela Olimene, Shawn Pan
+CalypsoChaCha  Calypso Cha-Cha  190
+Alexandra Poret, Amy Li, Andy Huang, Cynthia Cao, Esther Horwich, Evelyne Ringoot, Flora Su, Linda Warner, Maureen Fountain Quinn, Michaela Olimene, Phil Michael, Shawn Pan, Sue Lee
 
 NightonBaldMountain  Night on Bald Mountain  1
-Elena Popkova, Frances Keer, Julie Chen, Kennedy Gore, Orisvaldo Salviano Neto, Tzu-An Sheng
+Elena Popkova, Frances Keer, Grace Chen, Julie Chen, Kennedy Gore, Orisvaldo Salviano Neto, Tzu-An Sheng
 
