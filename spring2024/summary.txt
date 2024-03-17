@@ -1,5 +1,5 @@
 Groupnumber  We Go Together  174
-Amy Mossman, Anji Zhang, Christine Imogu, Elena Popkova, Frances Keer, Grace Chen, Howard Beck, Julie Chen, Kate Oteng-Bediako, Kennedy Gore, Sofia Chufani de la Cuadra, Tzu-An Sheng
+Amy Mossman, Anji Zhang, Christine Imogu, Elena Popkova, Frances Keer, Grace Chen, Julie Chen, Kate Oteng-Bediako, Kennedy Gore, Leticia Barbieri Stroeh, Sofia Chufani de la Cuadra, Tzu-An Sheng
 
 AManWithoutLove  A Man Without Love  161
 Lindsay Bolino
@@ -19,7 +19,7 @@ Amanda Paredes Rioboo
 DontLoseUrHead  Don’t Lose Ur Head  100
 Cassie Parent
 
-CellBlockTango  Cell Block Tango  360
+CellBlockTango  Cell Block Tango  419
 Eleanor Li, Ita Furan, Lana Van Note, Lili Sun, Lindsay Bolino, Mandy Paredes
 
 Warmup1  Warmup (7 minutes)  420
@@ -62,9 +62,9 @@ SomewhereinTime  Somewhere in Time  217
 Lili Sun
 
 WayDownHadestown  Way Down Hadestown  126
-Alexandra Poret, Cassie Parent, Eleanor Li, Evelyne Ringoot, Juliana Stachurska
+Alexandra Poret, Cassie Parent, Eleanor Li, Juliana Stachurska
 
-AllThatJazz  All That Jazz  221
+AllThatJazz  All That Jazz  188
 Lana Van Note
 
 BackstageRomance  Backstage Romance  323
@@ -73,14 +73,11 @@ Ita Futran
 Snakes  Snakes  101
 Alexandra Poret
 
-Madonnafrozen  Madonna - frozen  146
-Evelyne Ringoot
-
 ElTangodeRoxanne  El Tango de Roxanne  184
 Sabrina Meng
 
 CalypsoChaCha  Calypso Cha-Cha  190
-Alexandra Poret, Amy Li, Andy Huang, Cynthia Cao, Esther Horwich, Evelyne Ringoot, Flora Su, Linda Warner, Maureen Fountain Quinn, Michaela Olimene, Phil Michael, Shawn Pan, Sue Lee
+Alexandra Poret, Amy Li, Andy Huang, Cynthia Cao, Esther Horwich, Flora Su, Linda Warner, Maureen Fountain Quinn, Michaela Olimene, Phil Michael, Shawn Pan, Sue Lee
 
 NightonBaldMountain  Night on Bald Mountain  1
 Elena Popkova, Frances Keer, Grace Chen, Julie Chen, Kennedy Gore, Orisvaldo Salviano Neto, Tzu-An Sheng
