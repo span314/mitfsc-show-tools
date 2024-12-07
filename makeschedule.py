@@ -300,8 +300,8 @@ def combine_responses(schedule):
 ################
 
 if __name__ == "__main__":
-    show_schedule = Schedule("spring2024", datetime.datetime(2024, 3, 17, 14, 5))
-    combine_responses(show_schedule)
+    show_schedule = Schedule("winter2024", datetime.datetime(2024, 12, 8, 14, 5))
+    # combine_responses(show_schedule)
     parse_starts_csv(show_schedule)
     output_summary(show_schedule)
     output_schedule(show_schedule)
